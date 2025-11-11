@@ -1,0 +1,303 @@
+/**
+ * NeoUI Styles - Advanced UI Generator
+ * Enhanced styling for the AI prompt generation tool
+ * Version: 1.0.0
+ */
+
+/* Additional animations and effects */
+@keyframes neoui-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes neoui-glow {
+    0% { box-shadow: 0 0 5px rgba(247, 183, 51, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(247, 183, 51, 0.8), 0 0 30px rgba(247, 183, 51, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(247, 183, 51, 0.5); }
+}
+
+@keyframes neoui-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes neoui-bounce-in {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Enhanced toolbar animations */
+#neoui-toolbar {
+    animation: neoui-slide-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neoui-btn.neoui-active {
+    animation: neoui-pulse 2s infinite;
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    border-color: #f7b733;
+}
+
+/* Enhanced element highlighting */
+.neoui-element-highlight {
+    animation: neoui-glow 2s infinite;
+    transition: all 0.3s ease;
+}
+
+/* Notification styles */
+.neoui-notification {
+    animation: neoui-bounce-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading states */
+.neoui-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.neoui-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: neoui-loading-sweep 1.5s infinite;
+}
+
+@keyframes neoui-loading-sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Enhanced scrollbar for better UX */
+.neoui-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.neoui-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.neoui-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.neoui-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #fc4a1a, #f7b733);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #neoui-toolbar {
+        width: 320px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .neoui-content {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #neoui-toolbar {
+        width: calc(100vw - 20px);
+        right: 10px;
+        left: 10px;
+    }
+    
+    .neoui-minimized {
+        width: 120px;
+        left: auto;
+        right: 10px;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    #neoui-toolbar {
+        background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+        border-color: rgba(247, 183, 51, 0.3);
+    }
+    
+    .neoui-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .neoui-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #neoui-toolbar {
+        border: 2px solid #f7b733;
+    }
+    
+    .neoui-btn {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .neoui-element-highlight {
+        outline: 4px solid #f7b733 !important;
+        outline-offset: 4px !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #neoui-toolbar,
+    .neoui-btn,
+    .neoui-element-highlight,
+    .neoui-notification {
+        animation: none;
+        transition: none;
+    }
+    
+    .neoui-btn::before {
+        display: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    #neoui-toolbar {
+        display: none !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.neoui-btn:focus,
+#neoui-custom-prompt:focus,
+.neoui-minimize:focus,
+.neoui-close:focus {
+    outline: 2px solid #f7b733;
+    outline-offset: 2px;
+}
+
+/* Enhanced visual feedback */
+.neoui-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.neoui-primary:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Tooltip styles */
+.neoui-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10002;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.neoui-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Code syntax highlighting in prompt output */
+.neoui-prompt-output code {
+    background: rgba(247, 183, 51, 0.1);
+    color: #f7b733;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Enhanced selection styles */
+.neoui-selected-element {
+    outline: 2px solid #4CAF50 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2) !important;
+}
+
+/* Status indicators */
+.neoui-status-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4CAF50;
+    animation: neoui-pulse 2s infinite;
+}
+
+.neoui-status-indicator.error {
+    background: #f44336;
+}
+
+.neoui-status-indicator.warning {
+    background: #ff9800;
+}
+
+/* Enhanced prompt output formatting */
+.neoui-prompt-output {
+    position: relative;
+}
+
+/* Glassmorphism effects */
+.neoui-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Micro-interactions */
+.neoui-btn:hover .neoui-btn-icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.neoui-logo:hover .neoui-icon {
+    transform: rotate(360deg);
+    transition: transform 0.6s ease;
+}
+
+/* Enhanced visual hierarchy */
+.neoui-section:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(247, 183, 51, 0.3), transparent);
+    margin-top: 20px;
+}

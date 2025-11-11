@@ -1,0 +1,62 @@
+[
+    {
+        "id": "bc45d386-5a0e-4e9a-82ff-ef8e0fe16c30",
+        "title": "ATENCIÓN PERSONALIZADA",
+        "icon": "user-svg",
+        "description": "Servicio personalizado para cada cliente",
+        "status": "active",
+        "order": 1,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "08b9eb07-2286-4d17-9120-dd89f92efd63",
+        "title": "PRECIOS COMPETITIVOS",
+        "icon": "dollar-svg",
+        "description": "Los mejores precios del mercado",
+        "status": "active",
+        "order": 2,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "9837c838-3caa-4d34-8176-512d2816c3be",
+        "title": "ENVÍO GRATIS",
+        "icon": "truck-svg",
+        "description": "Envío gratuito en compras mayores",
+        "status": "active",
+        "order": 3,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "b1d8e316-e9f4-4a83-af5f-094b1c023daa",
+        "title": "GARANTÍA",
+        "icon": "shield-svg",
+        "description": "Garantía en todos nuestros productos",
+        "status": "active",
+        "order": 4,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "b6bb50f6-045a-4120-bbe5-e960b07012ad",
+        "title": "SOPORTE 24\/7",
+        "icon": "clock-svg",
+        "description": "Atención al cliente las 24 horas",
+        "status": "active",
+        "order": 5,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "647237cf-861d-4531-8572-8f4126cd79e8",
+        "title": "PAGOS SEGUROS",
+        "icon": "card-svg",
+        "description": "Transacciones 100% seguras",
+        "status": "active",
+        "order": 6,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    }
+]

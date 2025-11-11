@@ -1,0 +1,503 @@
+/**
+ * NeoUI Styles - Advanced UI Generator
+ * Enhanced styling for the AI prompt generation tool
+ * Version: 1.0.0
+ */
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Main toolbar container */
+#neoui-toolbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+#neoui-toolbar.neoui-minimized {
+    width: 200px;
+    height: 60px;
+    overflow: hidden;
+}
+
+/* Header */
+.neoui-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neoui-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.neoui-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.neoui-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.neoui-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.neoui-minimize,
+.neoui-close {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.neoui-minimize:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.neoui-close:hover {
+    background: rgba(255, 59, 48, 0.8);
+    transform: scale(1.1);
+}
+
+/* Content area */
+.neoui-content {
+    padding: 16px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.neoui-section {
+    margin-bottom: 20px;
+}
+
+.neoui-section:last-child {
+    margin-bottom: 0;
+}
+
+.neoui-section h4 {
+    margin: 0 0 12px 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Buttons */
+.neoui-btn {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.neoui-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.neoui-btn:active {
+    transform: translateY(0);
+}
+
+.neoui-btn-icon {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.neoui-primary {
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    border-color: #f7b733;
+    font-weight: 600;
+}
+
+.neoui-primary:hover {
+    background: linear-gradient(135deg, #fc4a1a, #f7b733);
+    box-shadow: 0 4px 15px rgba(247, 183, 51, 0.4);
+}
+
+.neoui-secondary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-color: #667eea;
+}
+
+.neoui-secondary:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.neoui-success {
+    background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+    border-color: #56ab2f;
+}
+
+.neoui-success:hover {
+    background: linear-gradient(135deg, #a8e6cf, #56ab2f);
+    box-shadow: 0 4px 15px rgba(86, 171, 47, 0.4);
+}
+
+/* Selected element info */
+.neoui-selected-info {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.neoui-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+/* Custom prompt textarea */
+#neoui-custom-prompt {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+#neoui-custom-prompt:focus {
+    outline: none;
+    border-color: #f7b733;
+    box-shadow: 0 0 0 2px rgba(247, 183, 51, 0.2);
+}
+
+#neoui-custom-prompt::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Prompt output */
+.neoui-prompt-output {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.neoui-prompt-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.neoui-prompt-actions .neoui-btn {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* Element highlighting */
+.neoui-element-highlight {
+    outline: 3px solid #f7b733 !important;
+    outline-offset: 2px !important;
+    background: rgba(247, 183, 51, 0.1) !important;
+    cursor: crosshair !important;
+    position: relative !important;
+}
+
+.neoui-element-highlight::before {
+    content: 'Click to select';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #f7b733;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 10001;
+    white-space: nowrap;
+}
+
+/* Animations */
+@keyframes neoui-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes neoui-glow {
+    0% { box-shadow: 0 0 5px rgba(247, 183, 51, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(247, 183, 51, 0.8), 0 0 30px rgba(247, 183, 51, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(247, 183, 51, 0.5); }
+}
+
+@keyframes neoui-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes neoui-bounce-in {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Enhanced toolbar animations */
+#neoui-toolbar {
+    animation: neoui-slide-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neoui-btn.neoui-active {
+    animation: neoui-pulse 2s infinite;
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    border-color: #f7b733;
+}
+
+/* Enhanced element highlighting */
+.neoui-element-highlight {
+    animation: neoui-glow 2s infinite;
+    transition: all 0.3s ease;
+}
+
+/* Enhanced scrollbar for better UX */
+.neoui-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.neoui-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.neoui-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.neoui-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #fc4a1a, #f7b733);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #neoui-toolbar {
+        width: 320px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .neoui-content {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #neoui-toolbar {
+        width: calc(100vw - 20px);
+        right: 10px;
+        left: 10px;
+    }
+    
+    .neoui-minimized {
+        width: 120px;
+        left: auto;
+        right: 10px;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    #neoui-toolbar {
+        background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+        border-color: rgba(247, 183, 51, 0.3);
+    }
+    
+    .neoui-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .neoui-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #neoui-toolbar {
+        border: 2px solid #f7b733;
+    }
+    
+    .neoui-btn {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .neoui-element-highlight {
+        outline: 4px solid #f7b733 !important;
+        outline-offset: 4px !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #neoui-toolbar,
+    .neoui-btn,
+    .neoui-element-highlight {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    #neoui-toolbar {
+        display: none !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.neoui-btn:focus,
+#neoui-custom-prompt:focus,
+.neoui-minimize:focus,
+.neoui-close:focus {
+    outline: 2px solid #f7b733;
+    outline-offset: 2px;
+}
+
+/* Enhanced visual feedback */
+.neoui-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.neoui-primary:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Notification styles */
+.neoui-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 10002;
+    animation: neoui-bounce-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neoui-notification.success {
+    background: rgba(86, 171, 47, 0.9);
+    border-color: #56ab2f;
+}
+
+.neoui-notification.error {
+    background: rgba(255, 59, 48, 0.9);
+    border-color: #ff3b30;
+}
+
+/* Loading states */
+.neoui-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.neoui-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: neoui-loading-sweep 1.5s infinite;
+}
+
+@keyframes neoui-loading-sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}

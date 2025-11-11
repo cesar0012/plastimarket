@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Iconos PNG para NeoUI Extension</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #FF6B35;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .icon-preview {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .icon-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+        }
+        .icon-item canvas {
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+        .generate-btn {
+            background: linear-gradient(135deg, #FF6B35, #ff9935);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.2s ease;
+        }
+        .generate-btn:hover {
+            transform: translateY(-2px);
+        }
+        .download-links {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-links a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 16px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .download-links a:hover {
+            background: #218838;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        .instructions h3 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Generador de Iconos PNG para NeoUI Extension</h1>
+        
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Esta herramienta genera los iconos PNG necesarios para la extensión de Chrome desde el diseño SVG.
+        </p>
+        
+        <div class="icon-preview">
+            <div class="icon-item">
+                <h4>16x16</h4>
+                <canvas id="canvas16" width="16" height="16"></canvas>
+            </div>
+            <div class="icon-item">
+                <h4>32x32</h4>
+                <canvas id="canvas32" width="32" height="32"></canvas>
+            </div>
+            <div class="icon-item">
+                <h4>48x48</h4>
+                <canvas id="canvas48" width="48" height="48"></canvas>
+            </div>
+            <div class="icon-item">
+                <h4>128x128</h4>
+                <canvas id="canvas128" width="128" height="128"></canvas>
+            </div>
+        </div>
+        
+        <button class="generate-btn" onclick="generateIcons()">Generar Iconos PNG</button>
+        
+        <div class="download-links" id="downloadLinks">
+            <h3>📥 Descargar Iconos:</h3>
+            <a id="download16" download="icon16.png">Descargar 16x16</a>
+            <a id="download32" download="icon32.png">Descargar 32x32</a>
+            <a id="download48" download="icon48.png">Descargar 48x48</a>
+            <a id="download128" download="icon128.png">Descargar 128x128</a>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Instrucciones de Instalación:</h3>
+            <ol>
+                <li>Haz clic en "Generar Iconos PNG" arriba</li>
+                <li>Descarga todos los iconos PNG generados</li>
+                <li>Guarda los archivos PNG en la carpeta <code>neo-ui/icons/</code></li>
+                <li>Reemplaza los archivos SVG existentes con los PNG descargados</li>
+                <li>Abre Chrome y ve a <code>chrome://extensions/</code></li>
+                <li>Activa el "Modo de desarrollador" en la esquina superior derecha</li>
+                <li>Haz clic en "Cargar extensión sin empaquetar"</li>
+                <li>Selecciona la carpeta <code>neo-ui</code></li>
+                <li>¡La extensión estará lista para usar!</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        function generateIcons() {
+            const sizes = [16, 32, 48, 128];
+            
+            sizes.forEach(size => {
+                const canvas = document.getElementById(`canvas${size}`);
+                const ctx = canvas.getContext('2d');
+                
+                // Limpiar canvas
+                ctx.clearRect(0, 0, size, size);
+                
+                // Crear gradiente
+                const gradient = ctx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, '#FF6B35');
+                gradient.addColorStop(1, '#FF9935');
+                
+                // Dibujar fondo con bordes redondeados
+                const radius = size * 0.16; // 4px para 24px = 0.16
+                ctx.fillStyle = gradient;
+                roundRect(ctx, 0, 0, size, size, radius);
+                ctx.fill();
+                
+                // Configurar estilo para las líneas
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = size * 0.0625; // 1.5px para 24px = 0.0625
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                
+                // Escalar las coordenadas del SVG (24x24) al tamaño actual
+                const scale = size / 24;
+                
+                // Dibujar las tres capas del icono
+                // Capa superior
+                ctx.beginPath();
+                ctx.moveTo(12 * scale, 6 * scale);
+                ctx.lineTo(6 * scale, 9 * scale);
+                ctx.lineTo(12 * scale, 12 * scale);
+                ctx.lineTo(18 * scale, 9 * scale);
+                ctx.closePath();
+                ctx.stroke();
+                
+                // Capa media
+                ctx.beginPath();
+                ctx.moveTo(6 * scale, 12 * scale);
+                ctx.lineTo(12 * scale, 15 * scale);
+                ctx.lineTo(18 * scale, 12 * scale);
+                ctx.stroke();
+                
+                // Capa inferior
+                ctx.beginPath();
+                ctx.moveTo(6 * scale, 15 * scale);
+                ctx.lineTo(12 * scale, 18 * scale);
+                ctx.lineTo(18 * scale, 15 * scale);
+                ctx.stroke();
+                
+                // Crear enlace de descarga
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const downloadLink = document.getElementById(`download${size}`);
+                    downloadLink.href = url;
+                });
+            });
+            
+            // Mostrar enlaces de descarga
+            document.getElementById('downloadLinks').style.display = 'block';
+        }
+        
+        // Función para dibujar rectángulos con bordes redondeados
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+        
+        // Generar iconos automáticamente al cargar la página
+        window.addEventListener('load', () => {
+            setTimeout(generateIcons, 500);
+        });
+    </script>
+</body>
+</html>

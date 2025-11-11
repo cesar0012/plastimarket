@@ -1,0 +1,234 @@
+[
+    {
+        "id": "65fced27-be51-4df0-b2e8-860c7e6e5eaa",
+        "key": "bebidas",
+        "name": "BEBIDAS",
+        "slug": "bebidas",
+        "icon": "fas fa-wine-bottle",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Refrescos",
+                "icon": "fas fa-glass-whiskey"
+            },
+            {
+                "name": "Jugos",
+                "icon": "fas fa-apple-alt"
+            },
+            {
+                "name": "Agua",
+                "icon": "fas fa-tint"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 1,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "2af7ab5a-1ffb-43bc-a0fd-d00bf3327204",
+        "key": "cocina",
+        "name": "COCINA",
+        "slug": "cocina",
+        "icon": "fas fa-utensils",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Utensilios",
+                "icon": "fas fa-blender"
+            },
+            {
+                "name": "Ollas y Sartenes",
+                "icon": "fas fa-fire"
+            },
+            {
+                "name": "Electrodomésticos",
+                "icon": "fas fa-microchip"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 2,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "07c93873-7a13-4059-8b4a-ef2d737d604c",
+        "key": "decoracion",
+        "name": "DECORACIÓN HOGAR",
+        "slug": "decoraci-n-hogar",
+        "icon": "fas fa-home",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Adornos",
+                "icon": "fas fa-star"
+            },
+            {
+                "name": "Cuadros",
+                "icon": "fas fa-image"
+            },
+            {
+                "name": "Plantas",
+                "icon": "fas fa-seedling"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 3,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "2ccae2d8-ae87-433d-b9c6-483964156018",
+        "key": "electrodomesticos",
+        "name": "ELECTRODOMÉSTICOS",
+        "slug": "electrodom-sticos",
+        "icon": "fas fa-plug",
+        "product_count": 15,
+        "subcategories": [],
+        "special": false,
+        "status": "active",
+        "order": 4,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "5e4b66e5-dde9-420a-a2a8-ec1ddb4f6249",
+        "key": "ferreteria",
+        "name": "FERRETERÍA",
+        "slug": "ferreter-a",
+        "icon": "fas fa-tools",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Herramientas",
+                "icon": "fas fa-hammer"
+            },
+            {
+                "name": "Tornillos",
+                "icon": "fas fa-bolt"
+            },
+            {
+                "name": "Pinturas",
+                "icon": "fas fa-paint-brush"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 5,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "2350fe2b-a3b4-474e-a949-33a23ac98e87",
+        "key": "infantil",
+        "name": "INFANTIL",
+        "slug": "infantil",
+        "icon": "fas fa-baby",
+        "product_count": 8,
+        "subcategories": [],
+        "special": false,
+        "status": "active",
+        "order": 6,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "3bc30ec7-fde8-4eb6-b454-0b9de4ca47b5",
+        "key": "importacion",
+        "name": "IMPORTACIÓN",
+        "slug": "importaci-n",
+        "icon": "fas fa-globe",
+        "product_count": 12,
+        "subcategories": [],
+        "special": false,
+        "status": "active",
+        "order": 7,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "7a76263f-3e58-4886-99bb-9ddb3d10f969",
+        "key": "limpieza",
+        "name": "LIMPIEZA Y BAÑO",
+        "slug": "limpieza-y-ba-o",
+        "icon": "fas fa-spray-can",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Detergentes",
+                "icon": "fas fa-soap"
+            },
+            {
+                "name": "Desinfectantes",
+                "icon": "fas fa-shield-virus"
+            },
+            {
+                "name": "Papel Higiénico",
+                "icon": "fas fa-toilet-paper"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 8,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "3723440c-681d-42fb-ba25-e86398416886",
+        "key": "mascotas",
+        "name": "MASCOTAS",
+        "slug": "mascotas",
+        "icon": "fas fa-paw",
+        "product_count": 6,
+        "subcategories": [],
+        "special": false,
+        "status": "active",
+        "order": 9,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "d3f94336-14d4-419f-b532-7ebf51e7dc3e",
+        "key": "ofertas",
+        "name": "OFERTAS",
+        "slug": "ofertas",
+        "icon": "fas fa-fire",
+        "product_count": "HOT!",
+        "subcategories": [],
+        "special": true,
+        "status": "active",
+        "order": 10,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "5f3d7d7e-22d3-4159-aa8a-0bcc77f79f44",
+        "key": "organizacion",
+        "name": "ORGANIZACIÓN",
+        "slug": "organizaci-n",
+        "icon": "fas fa-boxes",
+        "product_count": 3,
+        "subcategories": [
+            {
+                "name": "Cajas",
+                "icon": "fas fa-box"
+            },
+            {
+                "name": "Contenedores",
+                "icon": "fas fa-cube"
+            },
+            {
+                "name": "Organizadores",
+                "icon": "fas fa-layer-group"
+            }
+        ],
+        "special": false,
+        "status": "active",
+        "order": 11,
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    }
+]

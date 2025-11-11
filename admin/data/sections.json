@@ -1,0 +1,133 @@
+[
+    {
+        "id": "b91a6314-60d3-4b99-9917-c773b44225bb",
+        "key": "announcement_bar",
+        "title": "Barra de Anuncios",
+        "description": "Mensaje promocional en la parte superior",
+        "elements": [
+            "message"
+        ],
+        "file_location": "header",
+        "status": "active",
+        "order": 1,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "f8e888f7-c5a2-4994-8547-d5eea996c762",
+        "key": "header",
+        "title": "Header Principal",
+        "description": "Logo, navegación y barra de búsqueda",
+        "elements": [
+            "logo",
+            "navigation",
+            "search_bar",
+            "icons"
+        ],
+        "file_location": "header",
+        "status": "active",
+        "order": 2,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "947cf34f-0da8-4b7f-9b35-4795d661e5ec",
+        "key": "categories_menu",
+        "title": "Menú de Categorías",
+        "description": "Sidebar con categorías de productos",
+        "elements": [
+            "categories",
+            "subcategories",
+            "icons",
+            "product_counts"
+        ],
+        "file_location": "offcanvas",
+        "status": "active",
+        "order": 3,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "6b6a288e-0927-4cc1-9bc7-b51be269e96f",
+        "key": "hero_section",
+        "title": "Sección Hero",
+        "description": "Banner principal con llamada a la acción",
+        "elements": [
+            "title",
+            "subtitle",
+            "buttons",
+            "badge",
+            "hero_image"
+        ],
+        "file_location": "main_content",
+        "status": "active",
+        "order": 4,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "9e94f4f0-426f-4205-b001-a000d3cf9965",
+        "key": "features_section",
+        "title": "Características",
+        "description": "Iconos y descripciones de servicios",
+        "elements": [
+            "feature_items",
+            "icons",
+            "titles"
+        ],
+        "file_location": "main_content",
+        "status": "active",
+        "order": 5,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "8d409aa0-a6fb-4bcb-8325-e0e13526b4b7",
+        "key": "brands_section",
+        "title": "Marcas",
+        "description": "Carrusel de marcas asociadas",
+        "elements": [
+            "brand_logos",
+            "brand_names"
+        ],
+        "file_location": "main_content",
+        "status": "active",
+        "order": 6,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "8831f556-d292-4a20-816c-38e505a33f85",
+        "key": "products_section",
+        "title": "Productos Destacados",
+        "description": "Grid de productos principales",
+        "elements": [
+            "product_cards",
+            "prices",
+            "images",
+            "descriptions"
+        ],
+        "file_location": "main_content",
+        "status": "active",
+        "order": 7,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    },
+    {
+        "id": "86765d1a-bf8d-404b-a620-8f6319ac4df7",
+        "key": "footer",
+        "title": "Pie de Página",
+        "description": "Información de contacto y enlaces",
+        "elements": [
+            "contact_info",
+            "links",
+            "social_media",
+            "copyright"
+        ],
+        "file_location": "footer",
+        "status": "active",
+        "order": 8,
+        "created_at": 1755977783,
+        "updated_at": 1755977783
+    }
+]

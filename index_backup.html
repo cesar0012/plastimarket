@@ -1,0 +1,2753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLASTIMARKET - Tu tienda de comercio electrónico</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Anuncios Superior -->
+    <div class="announcement-bar">
+        <div class="container-fluid">
+            <p class="text-center mb-0">¡PRECIOS EXCLUSIVOS A MAYORISTAS!</p>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-4">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="logo">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </div>
+
+                <!-- Barra de Búsqueda Integrada -->
+                <div class="search-wrapper d-none d-lg-flex">
+                    <form class="search-form d-flex">
+                        <select class="form-select search-category">
+                            <option selected>Todas las categorías</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="cocina">Cocina</option>
+                            <option value="decoracion">Decoración</option>
+                            <option value="electrodomesticos">Electrodomésticos</option>
+                            <option value="ferreteria">Ferretería</option>
+                            <option value="limpieza">Limpieza</option>
+                            <option value="muebles">Muebles</option>
+                        </select>
+                        <div class="search-input-wrapper">
+                            <input type="text" class="form-control search-input" placeholder="Buscar productos, marcas o categorías...">
+                            <button type="submit" class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Header Icons and Categories Menu -->
+                <div class="header-icons">
+                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-search"></i></a>
+                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-user"></i></a>
+                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
+                    <!-- Categories Menu Toggle -->
+                    <button class="categories-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Categories Sidebar Menu -->
+    <div class="offcanvas offcanvas-end categories-offcanvas" tabindex="-1" id="categoriesMenu" aria-labelledby="categoriesMenuLabel">
+        <div class="offcanvas-header">
+            <div class="header-content">
+                <div class="header-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <div class="header-text">
+                    <h5 class="offcanvas-title" id="categoriesMenuLabel">Categorías</h5>
+                    <span class="header-subtitle">Explora nuestros productos</span>
+                </div>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="search-section">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Buscar categoría...">
+                </div>
+            </div>
+            <nav class="categories-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="bebidas">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-wine-bottle"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">BEBIDAS</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="bebidas">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-glass-whiskey"></i>Refrescos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i>Jugos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-tint"></i>Agua</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="cocina">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">COCINA</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="cocina">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-blender"></i>Utensilios</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-fire"></i>Ollas y Sartenes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-microchip"></i>Electrodomésticos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="decoracion">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">DECORACIÓN HOGAR</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="decoracion">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-star"></i>Adornos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-image"></i>Cuadros</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-seedling"></i>Plantas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">ELECTRODOMÉSTICOS</span>
+                                    <span class="category-count">15 productos</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="ferreteria">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">FERRETERÍA</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="ferreteria">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-hammer"></i>Herramientas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-bolt"></i>Tornillos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush"></i>Pinturas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-baby"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">INFANTIL</span>
+                                    <span class="category-count">8 productos</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">IMPORTACIÓN</span>
+                                    <span class="category-count">12 productos</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="limpieza">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-spray-can"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">LIMPIEZA Y BAÑO</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="limpieza">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-soap"></i>Detergentes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shield-virus"></i>Desinfectantes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-toilet-paper"></i>Papel Higiénico</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="muebles">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-chair"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">MUEBLES</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="muebles">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-chair"></i>Sillas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-table"></i>Mesas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-archive"></i>Estantes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="mesa-bar">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-glass-cheers"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">MESA Y BAR</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="mesa-bar">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-wine-glass"></i>Vasos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-circle"></i>Platos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-utensils"></i>Cubiertos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-paw"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">MASCOTAS</span>
+                                    <span class="category-count">6 productos</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item special-offer">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">OFERTAS</span>
+                                    <span class="category-count">¡HOT!</span>
+                                </div>
+                                <div class="pulse-effect"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="organizacion">
+                            <div class="nav-content">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="category-name">ORGANIZACIÓN</span>
+                                    <span class="category-count">3 productos</span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="organizacion">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-box"></i>Cajas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cube"></i>Contenedores</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-layer-group"></i>Organizadores</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section Sin Parallax -->
+    <section class="hero-section py-5" data-aos="fade-in">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <span class="hero-badge" data-aos="fade-up" data-aos-delay="100">¡Nuevos Productos!</span>
+                                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Surte tu negocio ahora ¡Y ahorra!</h1>
+                                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">ACCEDE A PRECIOS EXCLUSIVOS DE MAYOREO</p>
+                                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                                    <a href="#" class="btn btn-primary hero-btn me-3">QUIERO SER MAYORISTA</a>
+                                    <a href="#" class="btn btn-outline-light hero-btn-secondary">Ver Ofertas</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="500">
+                                <div class="hero-image-wrapper">
+                                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="Plastimarket Logo" class="hero-product-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.59 22C20.59 18.13 16.74 15 12 15C7.26 15 3.41 18.13 3.41 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">ATENCIÓN PERSONALIZADA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6312 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6312 13.6815 18 14.5717 18 15.5C18 16.4283 17.6312 17.3185 16.9749 17.9749C16.3185 18.6312 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">PRECIOS EXCLUSIVOS</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="20" r="1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="20" r="1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8L18 10L22 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">CONVENIOS CON PAQUETERÍAS</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="7.5,4.21 12,6.81 16.5,4.21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="7.5,19.79 7.5,14.6 3,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="21,12 16.5,14.6 16.5,19.79" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="12,22.08 12,16.91" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">PRODUCTOS NUEVOS CADA SEMANA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 18L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">RESEÑAS DE CLIENTES</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="3,6 21,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h6 class="feature-title">+20 AÑOS DE EXPERIENCIA</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Banner CTA -->
+    <section class="cta-banner">
+        <div class="container-fluid">
+            <p class="text-center mb-0">¿Eres nuevo por aca? contáctate con un asesor dando clic aquí.</p>
+        </div>
+    </section>
+
+    <!-- Categorías Estrella -->
+    <section class="star-categories py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Categorias</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/freepik__the-style-is-candid-image-photography-with-natural__10453.png" alt="Cocina" class="category-img">
+                        <div class="category-overlay">
+                            <h4>COCINA</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/freepik__the-style-is-candid-image-photography-with-natural__10454.jpg" alt="Limpieza y Baño" class="category-img">
+                        <div class="category-overlay">
+                            <h4>LIMPIEZA Y BAÑO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/Captura_de_pantalla_2025-02-26_a_la_s_2.23.49_p._m..png" alt="Organización" class="category-img">
+                        <div class="category-overlay">
+                            <h4>ORGANIZACIÓN Y ALMACENAMIENTO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/freepik__product-photography-of-assorted-brown-and-colorful__10456.jpg" alt="Patio y Jardín" class="category-img">
+                        <div class="category-overlay">
+                            <h4>PATIO Y JARDÍN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/Captura_de_pantalla_2025-02-25_163455.png" alt="Muebles" class="category-img">
+                        <div class="category-overlay">
+                            <h4>MUEBLES</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/collections/freepik__the-style-is-candid-image-photography-with-natural__10455.jpg" alt="Mesa y Bar" class="category-img">
+                        <div class="category-overlay">
+                            <h4>MESA Y BAR</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">Ver todo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo Más Nuevo -->
+    <section class="newest-products py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Lo más nuevo</h2>
+            <div class="products-carousel">
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2024-10-04T132637.010.png?v=1728322304" alt="Bomba de agua">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Bomba de agua</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(24)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 1: Compact UI -->
+                            <div class="pricing-compact" data-retail="49.00" data-wholesale="42.00" data-min-qty="12">
+                                <div class="price-display">
+                                    <div class="current-price">$49.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $42.00 (12+ pzs)</span>
+                                    <span class="savings-badge">-$7.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T143429.208.png?v=1740616218" alt="Tazón Melamina">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(18)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 2: Compact UI -->
+                            <div class="pricing-compact" data-retail="21.00" data-wholesale="18.50" data-min-qty="24">
+                                <div class="price-display">
+                                    <div class="current-price">$21.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $18.50 (24+ pzs)</span>
+                                    <span class="savings-badge">-$2.50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T142040.839.png" alt="Plato Sopero">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">PLATO SOPERO MELAMINA 8" TIPO PELTRE</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(31)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 3: Compact UI -->
+                            <div class="pricing-compact" data-retail="15.00" data-wholesale="12.75" data-min-qty="36">
+                                <div class="price-display">
+                                    <div class="current-price">$15.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $12.75 (36+ pzs)</span>
+                                    <span class="savings-badge">-$2.25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135955.543.png" alt="Tazón Melamina">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(15)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 4: Compact UI -->
+                            <div class="pricing-compact" data-retail="11.50" data-wholesale="9.75" data-min-qty="48">
+                                <div class="price-display">
+                                    <div class="current-price">$11.50</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $9.75 (48+ pzs)</span>
+                                    <span class="savings-badge">-$1.75</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135024.519.png?v=1740615808" alt="Tazón Melamina">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(22)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 5: Compact UI -->
+                            <div class="pricing-compact" data-retail="19.00" data-wholesale="16.25" data-min-qty="30">
+                                <div class="price-display">
+                                    <div class="current-price">$19.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $16.25 (30+ pzs)</span>
+                                    <span class="savings-badge">-$2.75</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T133357.509.png?v=1740615892" alt="Tazón Melamina">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(19)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 6: Compact UI -->
+                            <div class="pricing-compact" data-retail="12.00" data-wholesale="10.20" data-min-qty="40">
+                                <div class="price-display">
+                                    <div class="current-price">$12.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $10.20 (40+ pzs)</span>
+                                    <span class="savings-badge">-$1.80</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T130908.116.png" alt="Tazón Melamina 6">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">TAZÓN MELAMINA 6"</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(27)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 7: Compact UI -->
+                            <div class="pricing-compact" data-retail="9.00" data-wholesale="7.65" data-min-qty="60">
+                                <div class="price-display">
+                                    <div class="current-price">$9.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $7.65 (60+ pzs)</span>
+                                    <span class="savings-badge">-$1.35</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-product-card">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T125823.355.png" alt="Sopero Melamina">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">SOPERO MELAMINA 9"</h5>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(16)</span>
+                        </div>
+                        <div class="price-container">
+                            <!-- Producto 8: Compact UI -->
+                            <div class="pricing-compact" data-retail="16.00" data-wholesale="13.60" data-min-qty="36">
+                                <div class="price-display">
+                                    <div class="current-price">$16.00</div>
+                                    <div class="price-label">Precio por pieza</div>
+                                </div>
+                                <div class="discount-info">
+                                    <span class="discount-text">Mayoreo: $13.60 (36+ pzs)</span>
+                                    <span class="savings-badge">-$2.40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner Section -->
+    <section class="promotional-banner py-5" id="promotionalBanner">
+        <div class="banner-background"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="banner-content" data-aos="fade-up">
+                        <h2 class="banner-title">¡Ofertas Especiales en Productos de Calidad!</h2>
+                        <p class="banner-subtitle">Descubre nuestra selección premium con descuentos únicos</p>
+                        <a href="#" class="btn btn-banner">Ver Ofertas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Novedades Importación Slider -->
+    <section class="import-products py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Novedades importación</h2>
+            <div class="import-slider-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="import-slider">
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T140512.513.png" alt="Cepillo para pelo">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>CEPILLO PARA PELO</h5>
+                                <p class="price">$ 35.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T132632.711.png" alt="Banco Extendible">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>BANCO EXTENDIBLE</h5>
+                                <p class="price">$ 159.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T140512.513.png" alt="Organizador Multiusos">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>ORGANIZADOR MULTIUSOS</h5>
+                                <p class="price">$ 89.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T132632.711.png" alt="Set de Contenedores">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>SET DE CONTENEDORES</h5>
+                                <p class="price">$ 125.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T140512.513.png" alt="Dispensador Automático">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>DISPENSADOR AUTOMÁTICO</h5>
+                                <p class="price">$ 199.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-02-01T132632.711.png" alt="Estante Modular">
+                                <div class="product-badge">NUEVO</div>
+                            </div>
+                            <div class="product-info">
+                                <h5>ESTANTE MODULAR</h5>
+                                <p class="price">$ 275.00</p>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" id="importPrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" id="importNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-dots" id="importDots"></div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">Ver todo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Deals Section -->
+    <section class="hot-deals py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="section-heading mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <h2 class="section-title mb-0">Ofertas del Día</h2>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-decoration-none fw-medium text-muted hover-text-primary">Ver Todas las Ofertas</a>
+                        <div class="d-flex gap-2">
+                            <button type="button" id="deals-prev" class="btn btn-outline-secondary btn-sm rounded-circle p-2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="button" id="deals-next" class="btn btn-outline-secondary btn-sm rounded-circle p-2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="hot-deals-banner position-relative rounded-4 bg-primary overflow-hidden p-4 text-white h-100">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25">
+                            <div class="bg-pattern"></div>
+                        </div>
+                        
+                        <div class="position-relative z-1">
+                            <span class="badge bg-warning text-dark mb-3">Productos para el Hogar</span>
+                            <h4 class="mb-3">Ofertas del Día</h4>
+                            <p class="fw-semibold text-warning mb-4">Ahorra hasta 50% en tu primera compra</p>
+                            
+                            <div class="countdown mb-4" id="countdown">
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <div class="countdown-item bg-white text-dark rounded px-2 py-1 text-center">
+                                        <span class="days fw-bold">15</span>
+                                        <small class="d-block">Días</small>
+                                    </div>
+                                    <div class="countdown-item bg-white text-dark rounded px-2 py-1 text-center">
+                                        <span class="hours fw-bold">08</span>
+                                        <small class="d-block">Hrs</small>
+                                    </div>
+                                    <div class="countdown-item bg-white text-dark rounded px-2 py-1 text-center">
+                                        <span class="minutes fw-bold">45</span>
+                                        <small class="d-block">Min</small>
+                                    </div>
+                                    <div class="countdown-item bg-white text-dark rounded px-2 py-1 text-center">
+                                        <span class="seconds fw-bold">30</span>
+                                        <small class="d-block">Seg</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-warning fw-bold d-inline-flex align-items-center gap-2 rounded-pill px-4 py-3 text-white shadow-lg" style="background: linear-gradient(135deg, #ff8c00, #ff6b35); border: none; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255, 140, 0, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                <i class="fas fa-store me-2"></i>
+                                Explorar Tienda
+                                <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="hot-deals-slider" id="hotDealsSlider">
+                        <!-- Primera fila de productos -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-danger">-30%</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2024-10-04T132637.010.png?v=1728322304" alt="Bomba de agua" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span class="rating-count text-muted ms-1">(24)</span>
+                                        </div>
+                                        <h5 class="product-title">Bomba de agua</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price-original text-muted text-decoration-line-through">$70.00</span>
+                                            <span class="price text-danger fw-bold ms-2">$49.00</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-success">Nuevo</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T143429.208.png?v=1740616218" alt="Tazón Melamina" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span class="rating-count text-muted ms-1">(18)</span>
+                                        </div>
+                                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price text-primary fw-bold">$21.00</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-warning text-dark">Oferta</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T142040.839.png" alt="Plato Sopero" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-muted"></i>
+                                            <span class="rating-count text-muted ms-1">(31)</span>
+                                        </div>
+                                        <h5 class="product-title">PLATO SOPERO MELAMINA 8" TIPO PELTRE</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price-original text-muted text-decoration-line-through">$20.00</span>
+                                            <span class="price text-danger fw-bold ms-2">$15.00</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Segunda fila de productos -->
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-danger">-42%</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135955.543.png" alt="Tazón Melamina" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span class="rating-count text-muted ms-1">(42)</span>
+                                        </div>
+                                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price-original text-muted text-decoration-line-through">$20.00</span>
+                                            <span class="price text-danger fw-bold ms-2">$11.50</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-info">Popular</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135024.519.png?v=1740615808" alt="Tazón Melamina" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span class="rating-count text-muted ms-1">(67)</span>
+                                        </div>
+                                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price text-primary fw-bold">$19.00</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="product-card deals-product-card">
+                                    <div class="product-badge">
+                                        <span class="badge bg-warning text-dark">Limitado</span>
+                                    </div>
+                                    <div class="product-image" style="height: 180px; overflow: hidden; position: relative;">
+                                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T133357.509.png?v=1740615892" alt="Tazón Melamina" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                                        <div class="product-overlay">
+                                            <button class="btn btn-outline-light btn-sm quick-view-btn">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span class="rating-count text-muted ms-1">(15)</span>
+                                        </div>
+                                        <h5 class="product-title">TAZÓN MELAMINA TIPO PELTRE</h5>
+                                        <div class="price-container mb-3">
+                                            <span class="price text-primary fw-bold">$12.00</span>
+                                        </div>
+                                        <div class="product-actions">
+                                            <div class="quantity-selector mb-3">
+                                                <button class="qty-btn minus">-</button>
+                                                <input type="number" value="1" min="1" class="qty-input">
+                                                <button class="qty-btn plus">+</button>
+                                            </div>
+                                            <button class="btn btn-primary w-100 add-to-cart-btn">
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                Agregar al Carrito
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutoriales TikTok -->
+    <section class="tiktok-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Tutoriales TikTok</h2>
+                <p class="section-subtitle">Descubre nuestros mejores consejos y trucos</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-5 col-md-6">
+                    <div class="tiktok-card" data-video="https://www.tiktok.com/embed/7475861510078713093">
+                        <div class="tiktok-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="tiktok-overlay">
+                                <div class="tiktok-info">
+                                    <h4>Tutorial de Productos</h4>
+                                    <p>Aprende a usar nuestros productos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="tiktok-card" data-video="https://www.tiktok.com/embed/7436158406597053751">
+                        <div class="tiktok-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="tiktok-overlay">
+                                <div class="tiktok-info">
+                                    <h4>Tips y Consejos</h4>
+                                    <p>Consejos útiles para el hogar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Lightbox Modal will be created by JavaScript -->
+
+    <!-- Mapa de Ubicación -->
+    <section class="location-section">
+        <div class="location-container">
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-header">
+                        <h2 class="location-title">Nuestra Ubicación</h2>
+                        <p class="location-subtitle">Visítanos en nuestra sucursal principal</p>
+                    </div>
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Plasti Market Sucursal Albera</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horarios</h4>
+                                <p>Lun - Sáb: 9:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+52 (449) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="location-btn" onclick="openDirections()">
+                        <i class="fas fa-directions"></i>
+                        Cómo llegar
+                    </button>
+                </div>
+                <div class="location-map">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.9404915865416!2d-102.30582919999999!3d21.8983672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eef5a55e00af%3A0xfc0e5ebc4a3419b7!2sPlasti%20Market%20Sucursal%20Albera!5e0!3m2!1ses-419!2smx!4v1743445745048!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="600" 
+                            style="border:0; display: block; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="section-heading mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <h2 class="section-title mb-0">Marcas Destacadas</h2>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-decoration-none fw-medium text-muted hover-text-primary">Ver Todas las Marcas</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="brands-slider" id="brandsSlider">
+                <div class="row g-4">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex align-items-center justify-content-center">
+                            <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PlastiMarket" class="img-fluid" style="max-height: 60px; filter: grayscale(100%); transition: all 0.3s ease;">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-apple fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Apple</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-google fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Google</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-microsoft fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Microsoft</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-amazon fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Amazon</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-samsung fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Samsung</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-spotify fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Spotify</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-adobe fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Adobe</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="brand-item text-center p-3 border rounded-3 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                            <i class="fab fa-shopify fa-2x mb-2" style="color: #6c757d;"></i>
+                            <div class="brand-name" style="font-size: 0.8rem; font-weight: 600; color: #6c757d;">Shopify</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-new py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="newsletter-wrapper bg-light rounded-4 p-5">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-7">
+                        <div class="newsletter-content">
+                            <h3 class="newsletter-title mb-4">Mantente en casa y obtén tus productos diarios desde nuestra tienda</h3>
+                            <form class="newsletter-form">
+                                <div class="d-flex gap-3 flex-wrap flex-sm-nowrap">
+                                    <input type="email" class="form-control bg-white px-4 py-3 border-0 shadow-sm flex-grow-1" placeholder="Ingresa tu correo electrónico" style="border-radius: 8px;">
+                                    <button class="btn btn-success px-4 py-3 fw-medium flex-shrink-0" type="submit" style="border-radius: 8px; min-width: 150px;">
+                                        Suscribirse ahora
+                                    </button>
+                                </div>
+                            </form>
+                            <p class="text-muted mt-3 mb-0 fw-medium">Acepto que mis datos enviados sean recopilados y almacenados.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block text-end">
+                        <div class="newsletter-image">
+                            <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="Newsletter" class="img-fluid" style="max-width: 200px; opacity: 0.8;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Expandido -->
+    <footer class="main-footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="footer-logo mb-3">
+                        <p class="footer-description">Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Quick links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Búsqueda</a></li>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Categorías</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Cocina</a></li>
+                        <li><a href="#">Decoración</a></li>
+                        <li><a href="#">Limpieza</a></li>
+                        <li><a href="#">Electrodomésticos</a></li>
+                        <li><a href="#">Ferretería</a></li>
+                        <li><a href="#">Muebles</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <div class="footer-info">
+                        <p>© 2025, PLASTIMARKET</p>                        
+                        <p><a href="#">Política de privacidad</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    <!-- Import Products Slider -->
+    <script src="assets/js/slider.js"></script>
+    
+    <!-- Hot Deals Functionality -->
+    <script src="assets/js/hot-deals.js"></script>
+    <script src="assets/js/brands.js"></script>
+    
+    <!-- Promotional Banner -->
+    <script src="assets/js/banner.js"></script>
+    
+    <!-- TikTok Lightbox -->
+    <script src="assets/js/tiktok-lightbox.js"></script>
+    
+    <!-- Enhanced Pricing System with Auto-Transition -->
+    <script src="assets/js/enhanced-pricing.js"></script>
+    
+    <!-- Compact Pricing System -->
+    <script src="assets/js/compact-pricing.js"></script>
+    
+    <!-- Original Dynamic Pricing System (temporarily disabled) -->
+    <!-- <script src="assets/js/dynamic-pricing.js"></script> -->
+    
+    <!-- Pricing Interfaces -->
+    <script src="assets/js/pricing-interfaces.js"></script>
+    
+    <!-- Modal Personalizado de Políticas de Venta -->
+    <div id="customSalesPolicyModal" class="custom-modal-overlay">
+        <div class="custom-modal-container">
+            <!-- Header -->
+            <div class="custom-modal-header">
+                <div class="modal-title-section">
+                    <div class="title-icon-wrapper">
+                        <div class="icon-glow"></div>
+                        <div class="title-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                    </div>
+                    <div class="title-content">
+                        <h2>Políticas de Venta</h2>
+                        <p>Términos y condiciones de Plastimarket</p>
+                    </div>
+                </div>
+                <button id="closeCustomModal" class="custom-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div class="custom-modal-body">
+                <div class="policy-grid">
+                    <!-- Condiciones Generales -->
+                    <div class="policy-card featured">
+                        <div class="policy-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Condiciones Generales</h3>
+                        <p>Todos nuestros productos están sujetos a disponibilidad. Los precios pueden variar sin previo aviso y están expresados en pesos colombianos.</p>
+                        <div class="policy-highlights">
+                            <span class="highlight-tag">Disponibilidad</span>
+                            <span class="highlight-tag">Precios Variables</span>
+                            <span class="highlight-tag">COP</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Precios Mayoristas -->
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Precios Mayoristas</h3>
+                        <p>Ofrecemos descuentos especiales para compras al por mayor. Los precios mayoristas se aplican a partir de cantidades mínimas establecidas.</p>
+                        <div class="policy-highlights">
+                            <span class="highlight-tag">Descuentos</span>
+                            <span class="highlight-tag">Cantidad Mínima</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Envíos -->
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Envíos y Entregas</h3>
+                        <p>Realizamos envíos a nivel nacional. Los tiempos de entrega varían según la ubicación. Envío gratis en compras superiores a $150.000.</p>
+                        <div class="policy-highlights">
+                            <span class="highlight-tag">Nacional</span>
+                            <span class="highlight-tag">Envío Gratis +$150k</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Devoluciones -->
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                        <h3>Devoluciones</h3>
+                        <p>Aceptamos devoluciones dentro de los 15 días posteriores a la compra, siempre que el producto esté en perfectas condiciones.</p>
+                        <div class="policy-highlights">
+                            <span class="highlight-tag">15 Días</span>
+                            <span class="highlight-tag">Estado Original</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Métodos de Pago -->
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Métodos de Pago</h3>
+                        <p>Aceptamos transferencias bancarias, PSE, tarjetas de crédito y débito. Para compras mayoristas ofrecemos crédito empresarial.</p>
+                        <div class="policy-highlights">
+                            <span class="highlight-tag">Transferencia</span>
+                            <span class="highlight-tag">PSE</span>
+                            <span class="highlight-tag">Tarjetas</span>
+                            <span class="highlight-tag">Crédito</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Atención al Cliente -->
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Atención al Cliente</h3>
+                        <p>Nuestro equipo está disponible para resolver todas tus dudas y brindar asesoría especializada en productos plásticos.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+57 (1) 234-5678</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@plastimarket.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Lun - Vie: 8:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="custom-modal-footer">
+                <button id="closeModalSecondary" class="btn-secondary-custom">
+                    <i class="fas fa-times"></i>
+                    Cerrar
+                </button>
+                <button id="understoodBtn" class="btn-primary-custom">
+                    <i class="fas fa-check"></i>
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante mejorado -->
+    <button id="floating-policy-btn" class="floating-policy-btn" type="button">
+        <div class="btn-content">
+            <i class="fas fa-file-contract btn-icon"></i>
+            <span class="btn-text">Ver Políticas</span>
+        </div>
+        <div class="btn-ripple"></div>
+        <div class="btn-glow"></div>
+    </button>
+
+    <!-- Estilos CSS personalizados para el modal -->
+    <style>
+        /* Modal Overlay */
+        .custom-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 20px;
+        }
+        
+        .custom-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Modal Container */
+        .custom-modal-container {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 24px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+        
+        .custom-modal-overlay.active .custom-modal-container {
+            transform: scale(1) translateY(0);
+        }
+        
+        /* Modal Header */
+        .custom-modal-header {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .custom-modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .modal-title-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .title-icon-wrapper {
+            position: relative;
+        }
+        
+        .title-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .icon-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .title-content h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .title-content p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .custom-modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .custom-modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg) scale(1.1);
+        }
+        
+        /* Modal Body */
+        .custom-modal-body {
+            padding: 40px 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+        }
+        
+        .custom-modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .custom-modal-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .custom-modal-body::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 4px;
+        }
+        
+        /* Policy Grid */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        
+        .policy-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        
+        .policy-card.animate {
+            animation: slideInUp 0.6s ease forwards;
+        }
+        
+        .policy-card:nth-child(1) { animation-delay: 0.1s; }
+        .policy-card:nth-child(2) { animation-delay: 0.2s; }
+        .policy-card:nth-child(3) { animation-delay: 0.3s; }
+        .policy-card:nth-child(4) { animation-delay: 0.4s; }
+        .policy-card:nth-child(5) { animation-delay: 0.5s; }
+        .policy-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes slideInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .policy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
+        }
+        
+        .policy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .policy-card.featured {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            color: white;
+        }
+        
+        .policy-card.featured .policy-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .policy-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .policy-card:hover .policy-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .policy-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .policy-card.featured h3 {
+            color: white;
+        }
+        
+        .policy-card p {
+            margin: 0 0 15px 0;
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .policy-card.featured p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .policy-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .highlight-tag {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .policy-card.featured .highlight-tag {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Modal Footer */
+        .custom-modal-footer {
+            padding: 25px 30px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .btn-secondary-custom, .btn-primary-custom {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-secondary-custom {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary-custom:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        
+        /* Floating Button */
+        .floating-policy-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            color: white;
+            border: none;
+            border-radius: 60px;
+            padding: 0;
+            width: 180px;
+            height: 60px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
+            overflow: hidden;
+            z-index: 99999;
+        }
+        
+        .floating-policy-btn:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-icon {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-policy-btn:hover .btn-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .btn-text {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+        
+        .floating-policy-btn:active .btn-ripple {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .btn-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate-glow 4s linear infinite;
+            opacity: 0;
+        }
+        
+        .floating-policy-btn:hover .btn-glow {
+            opacity: 1;
+        }
+        
+        @keyframes rotate-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-modal-container {
+                margin: 10px;
+                max-height: 95vh;
+            }
+            
+            .custom-modal-header {
+                padding: 20px;
+            }
+            
+            .title-content h2 {
+                font-size: 22px;
+            }
+            
+            .custom-modal-body {
+                padding: 20px;
+            }
+            
+            .policy-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .floating-policy-btn {
+                width: 160px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .btn-content {
+                padding: 15px 20px;
+            }
+            
+            .btn-text {
+                font-size: 13px;
+            }
+        }
+        
+        
+        .custom-modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .modal-title-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .title-icon-wrapper {
+            position: relative;
+        }
+        
+        .title-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .icon-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .title-content h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .title-content p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .custom-modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .custom-modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg) scale(1.1);
+        }
+        
+        /* Modal Body */
+        .custom-modal-body {
+            padding: 40px 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+        }
+        
+        .custom-modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .custom-modal-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .custom-modal-body::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 4px;
+        }
+        
+        /* Policy Grid */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        
+        .policy-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideInUp 0.6s ease forwards;
+        }
+        
+        .policy-card:nth-child(1) { animation-delay: 0.1s; }
+        .policy-card:nth-child(2) { animation-delay: 0.2s; }
+        .policy-card:nth-child(3) { animation-delay: 0.3s; }
+        .policy-card:nth-child(4) { animation-delay: 0.4s; }
+        .policy-card:nth-child(5) { animation-delay: 0.5s; }
+        .policy-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes slideInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .policy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
+        }
+        
+        .policy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .policy-card.featured {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            color: white;
+        }
+        
+        .policy-card.featured .policy-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .policy-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .policy-card:hover .policy-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .policy-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .policy-card.featured h3 {
+            color: white;
+        }
+        
+        .policy-card p {
+            margin: 0 0 15px 0;
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .policy-card.featured p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .policy-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .highlight-tag {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .policy-card.featured .highlight-tag {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Modal Footer */
+        .custom-modal-footer {
+            padding: 25px 30px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .btn-secondary-custom, .btn-primary-custom {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-secondary-custom {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary-custom:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        
+        /* Floating Button */
+        .floating-policy-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            color: white;
+            border: none;
+            border-radius: 60px;
+            padding: 0;
+            width: 140px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 999998;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .floating-policy-btn:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-icon {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-policy-btn:hover .btn-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .btn-text {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+        
+        .floating-policy-btn:active .btn-ripple {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .btn-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate-glow 4s linear infinite;
+            opacity: 0;
+        }
+        
+        .floating-policy-btn:hover .btn-glow {
+            opacity: 1;
+        }
+        
+        @keyframes rotate-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-modal-container {
+                margin: 10px;
+                max-height: 95vh;
+            }
+            
+            .custom-modal-header {
+                padding: 20px;
+            }
+            
+            .title-content h2 {
+                font-size: 22px;
+            }
+            
+            .custom-modal-body {
+                padding: 20px;
+            }
+            
+            .policy-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .floating-policy-btn {
+                width: 120px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .btn-content {
+                padding: 15px 20px;
+            }
+            
+            .btn-text {
+                font-size: 13px;
+            }
+        }
+    </style>
+    
+    <!-- Script personalizado para el modal -->
+    <script>
+    (function() {
+        'use strict';
+        
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('customSalesPolicyModal');
+            const floatingBtn = document.getElementById('floating-policy-btn');
+            const closeBtn = document.getElementById('closeCustomModal');
+            const closeSecondaryBtn = document.getElementById('closeModalSecondary');
+            const understoodBtn = document.getElementById('understoodBtn');
+            
+            if (!modal || !floatingBtn) {
+                console.error('❌ Modal o botón flotante no encontrado');
+                return;
+            }
+            
+            // Función para abrir el modal
+            function openModal() {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Trigger staggered animations for cards
+                setTimeout(() => {
+                    const cards = modal.querySelectorAll('.policy-card');
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('animate');
+                        }, index * 100);
+                    });
+                }, 200);
+                
+                console.log('✅ Modal abierto');
+            }
+            
+            // Función para cerrar el modal
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Reset card animations
+                const cards = modal.querySelectorAll('.policy-card');
+                cards.forEach(card => {
+                    card.classList.remove('animate');
+                });
+                
+                console.log('✅ Modal cerrado');
+            }
+            
+            // Event listeners
+            floatingBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Ripple effect
+                const ripple = floatingBtn.querySelector('.btn-ripple');
+                if (ripple) {
+                    ripple.style.width = '0';
+                    ripple.style.height = '0';
+                    setTimeout(() => {
+                        ripple.style.width = '200px';
+                        ripple.style.height = '200px';
+                    }, 10);
+                }
+                
+                openModal();
+            });
+            
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (closeSecondaryBtn) closeSecondaryBtn.addEventListener('click', closeModal);
+            if (understoodBtn) understoodBtn.addEventListener('click', closeModal);
+            
+            // Cerrar al hacer click en el overlay
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Cerrar con la tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+            
+            // Auto-open modal on page load
+            setTimeout(() => {
+                openModal();
+            }, 1000); // Open after 1 second
+            
+            console.log('✅ Modal personalizado inicializado correctamente');
+        });
+    })();
+    </script>
+
+    <!-- NeoUI - Advanced AI Prompt Generator -->
+    <link rel="stylesheet" href="NeoUI/neoui.css">
+    <script src="NeoUI/neoui.js"></script>
+</body>
+</html>

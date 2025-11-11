@@ -1,0 +1,47 @@
+[
+    {
+        "id": "7ffbaf00-31ed-409b-b22f-e9d524fd6f4a",
+        "key": "site_title",
+        "value": "PLASTIMARKET - Tu tienda de comercio electrónico",
+        "type": "text",
+        "category": "general",
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "69aa43c6-0168-4b7e-b247-c5774f3da119",
+        "key": "site_logo",
+        "value": "https:\/\/f7df04-41.myshopify.com\/cdn\/shop\/files\/Logo_PLASTIMARKET.png?v=1728149508&width=170",
+        "type": "url",
+        "category": "general",
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "ca7bf91f-f2c0-4461-b097-cd6a4ceb1f8c",
+        "key": "announcement_message",
+        "value": "¡PRECIOS EXCLUSIVOS A MAYORISTAS!",
+        "type": "text",
+        "category": "announcement",
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "2c9e9cff-5455-48a0-b590-cd6509b41b14",
+        "key": "hero_title",
+        "value": "Surte tu negocio ahora ¡Y ahorra!",
+        "type": "text",
+        "category": "hero",
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    },
+    {
+        "id": "f46a04ca-c430-4281-8304-f5095b9307d5",
+        "key": "hero_subtitle",
+        "value": "ACCEDE A PRECIOS EXCLUSIVOS DE MAYOREO",
+        "type": "text",
+        "category": "hero",
+        "created_at": 1755977784,
+        "updated_at": 1755977784
+    }
+]

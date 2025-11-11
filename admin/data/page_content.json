@@ -1,0 +1,204 @@
+[
+    {
+        "id": "1528de84-8c20-4fc6-8cd7-80be4ced766c",
+        "section": "announcement_bar",
+        "content_key": "message",
+        "content_value": "¡PRECIOS EXCLUSIVOS A MAYORISTAS!111",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "9a476469-124f-4cd4-8c99-52135a62d7be",
+        "section": "header",
+        "content_key": "logo_url",
+        "content_value": "https:\/\/f7df04-41.myshopify.com\/cdn\/shop\/files\/Logo_PLASTIMARKET.png?v=1728149508&amp;width=170",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "50eab62c-7e0f-4754-be90-09a8e09bcbe0",
+        "section": "header",
+        "content_key": "logo_alt",
+        "content_value": "PLASTIMARKET",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "c0313277-1acd-44fe-992f-c7654bff0f4f",
+        "section": "hero_section",
+        "content_key": "badge_text",
+        "content_value": "¡Nuevos Productos!1",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "67ac491b-df37-4afb-8215-066276306253",
+        "section": "hero_section",
+        "content_key": "main_title",
+        "content_value": "Surte tu negocio ahora ¡Y ahorra!",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "e431d01f-11d8-4b31-8aa3-0d1ce887c490",
+        "section": "hero_section",
+        "content_key": "subtitle",
+        "content_value": "ACCEDE A PRECIOS EXCLUSIVOS DE MAYOREO",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "3ad84f28-b93d-4d4b-b03d-20f3d985af13",
+        "section": "hero_section",
+        "content_key": "primary_button_text",
+        "content_value": "QUIERO SER MAYORISTA",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "2dab3d05-55f5-4e14-9251-b6ff75aeaed6",
+        "section": "hero_section",
+        "content_key": "primary_button_url",
+        "content_value": "http:\/\/home.php",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "0b4b2520-98ed-412f-ae49-af6fcdc75093",
+        "section": "hero_section",
+        "content_key": "secondary_button_text",
+        "content_value": "Ver Ofertas",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "fa5acc92-d8ab-4f2b-9188-96e7b9965506",
+        "section": "hero_section",
+        "content_key": "secondary_button_url",
+        "content_value": "http:\/\/home.php",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "3c905e6c-abd2-4995-bd38-10cb3de78c77",
+        "section": "hero_section",
+        "content_key": "hero_image_url",
+        "content_value": "https:\/\/f7df04-41.myshopify.com\/cdn\/shop\/files\/Logo_PLASTIMARKET.png?v=1728149508&amp;width=170",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "06d4b7e0-69f3-4fda-88fc-25545df2f292",
+        "section": "hero_section",
+        "content_key": "hero_image_alt",
+        "content_value": "Plastimarket Logo",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "b8f72da8-86e6-4a7c-a22a-d6ddd0d9b308",
+        "section": "features_section",
+        "content_key": "feature_1_title",
+        "content_value": "ATENCIÓN PERSONALIZADA",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "1cc3a98d-2195-4370-b93f-1a4642989ba3",
+        "section": "features_section",
+        "content_key": "feature_2_title",
+        "content_value": "PRECIOS EXCLUSIVOS",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "f684e527-d743-4695-a48a-4ebffb95dd46",
+        "section": "features_section",
+        "content_key": "feature_3_title",
+        "content_value": "CONVENIOS CON PAQUETERÍAS",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "f573a4de-0ca4-4bd1-b7d2-2d229c14a264",
+        "section": "features_section",
+        "content_key": "feature_4_title",
+        "content_value": "PRODUCTOS NUEVOS CADA SEMANA",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "dca7ff16-258c-475b-9a2d-3d15208e06a6",
+        "section": "features_section",
+        "content_key": "feature_5_title",
+        "content_value": "RESEÑAS DE CLIENTES",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "2266a240-1b0f-4355-8977-5f1f8298e477",
+        "section": "features_section",
+        "content_key": "feature_6_title",
+        "content_value": "+20 AÑOS DE EXPERIENCIA",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "25c6e6dc-d561-4812-bde1-f6c420537440",
+        "section": "footer",
+        "content_key": "logo_url",
+        "content_value": "https:\/\/f7df04-41.myshopify.com\/cdn\/shop\/files\/Logo_PLASTIMARKET.png?v=1728149508&amp;width=170",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "93185c47-8684-4c60-94c9-134dae3554b5",
+        "section": "footer",
+        "content_key": "description",
+        "content_value": "Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "43592ce9-8f12-456c-a34b-fcfee37e9dc7",
+        "section": "footer",
+        "content_key": "facebook_url",
+        "content_value": "http:\/\/home.php",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "ff78a0b8-1a4f-422f-aec0-1689c303614b",
+        "section": "footer",
+        "content_key": "instagram_url",
+        "content_value": "http:\/\/home.php",
+        "created_at": 1755980084,
+        "updated_at": 1755983047
+    },
+    {
+        "id": "5fdab5d9-560d-4e05-b258-2d90f4c90383",
+        "section": "footer",
+        "content_key": "tiktok_url",
+        "content_value": "http:\/\/home.php",
+        "created_at": 1755980084,
+        "updated_at": 1755983048
+    },
+    {
+        "id": "2f3c7be1-1fd6-426e-b022-1c22a632b85c",
+        "section": "footer",
+        "content_key": "copyright_text",
+        "content_value": "© 2025, PLASTIMARKET",
+        "created_at": 1755980084,
+        "updated_at": 1755983048
+    },
+    {
+        "page": "quienes-somos",
+        "section": "all",
+        "content": "{\"hero_title\":\"Nuestra Historia\",\"hero_description\":\"M\\u00e1s de una d\\u00e9cada transformando hogares salvadore\\u00f1os con productos de melamina y pl\\u00e1sticos de la m\\u00e1s alta calidad.\",\"stat1_number\":\"15\",\"stat1_label\":\"A\\u00f1os de Experiencia\",\"stat2_number\":\"10000\",\"stat2_label\":\"Clientes Satisfechos\",\"stat3_number\":\"500\",\"stat3_label\":\"Productos Disponibles\",\"stat4_number\":\"100\",\"stat4_label\":\"Calidad Garantizada\",\"story1_title\":\"Nuestro Origen\",\"story1_content\":\"PlastiMarket naci\\u00f3 en 2008 con una visi\\u00f3n clara: ofrecer a las familias salvadore\\u00f1as productos de melamina y pl\\u00e1sticos que combinaran funcionalidad, durabilidad y dise\\u00f1o atractivo.\",\"story2_title\":\"Nuestro Crecimiento\",\"story2_content\":\"A lo largo de los a\\u00f1os, hemos expandido nuestro cat\\u00e1logo y mejorado nuestros procesos, siempre manteniendo nuestro compromiso con la calidad.\",\"values_title\":\"Nuestros Valores\",\"values_subtitle\":\"Los principios que gu\\u00edan cada decisi\\u00f3n que tomamos\",\"value1_title\":\"Calidad\",\"value1_content\":\"Seleccionamos cuidadosamente cada producto para garantizar que cumpla con los m\\u00e1s altos est\\u00e1ndares de calidad y durabilidad.\",\"value2_title\":\"Confianza\",\"value2_content\":\"Construimos relaciones duraderas con nuestros clientes basadas en la transparencia, honestidad y cumplimiento de promesas.\",\"value3_title\":\"Sostenibilidad\",\"value3_content\":\"Promovemos el uso de productos duraderos y reutilizables que contribuyen a un estilo de vida m\\u00e1s sostenible.\",\"team_section_title\":\"Nuestro Equipo en Acci\\u00f3n\",\"team_section_subtitle\":\"Conoce a las personas que hacen posible nuestra misi\\u00f3n\",\"cta_title\":\"\\u00bfListo para Descubrir Nuestros Productos?\",\"cta_description\":\"Explora nuestro cat\\u00e1logo completo y encuentra los productos perfectos para tu hogar\",\"cta_button_text\":\"Ver Tienda\",\"cta_button_url\":\"tienda.html\"}",
+        "updated_at": 1756025455,
+        "updated_by": "admin",
+        "id": "e06e2000-c193-4b24-9e90-00ca94e29007",
+        "created_at": 1756002060,
+        "content_value": "{\"hero_title\":\"Conoce Nuestra Historia\",\"hero_description\":\"M\\u00e1s de 15 a\\u00f1os transformando hogares con productos de melamina y pl\\u00e1sticos de la m\\u00e1s alta calidad. Somos tu socio de confianza para el hogar.\",\"stat1_number\":\"121\",\"stat1_label\":\"A\\u00f1os de Experiencia\",\"stat2_number\":\"10000\",\"stat2_label\":\"Clientes Satisfechos\",\"stat3_number\":\"500\",\"stat3_label\":\"Productos Disponibles\",\"stat4_number\":\"100\",\"stat4_label\":\"Calidad Garantizada\",\"story1_title\":\"Titulo 1\",\"story1_content\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"story2_title\":\"Titulo 2\",\"story2_content\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"values_title\":\"Titulo 3\",\"values_subtitle\":\"Subtitulo 1\",\"value1_title\":\"Titulo 4\",\"value1_content\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"value2_title\":\"Titulo 5\",\"value2_content\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"value3_title\":\"Titulo 6\",\"value3_content\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"cta_title\":\"Titulo 7\",\"cta_description\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"cta_button_text\":\"Bot\\u00f3n\",\"cta_button_url\":\"https:\\\/\\\/google.com\",\"team_title\":\"Titulo 8\",\"team_subtitle\":\"Subtitulo 2\",\"team1_image\":\"uploads\\\/team\\\/151ad998-ac91-4ce4-9626-280a49ab8d5b.png\",\"team1_category\":\"test\",\"team1_title\":\"Titulo 9\",\"team1_description\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"team2_image\":\"uploads\\\/team\\\/ed7e432c-7203-48f7-baff-48486956549b.png\",\"team2_category\":\"test\",\"team2_title\":\"Titulo 10\",\"team2_description\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\",\"team3_image\":\"uploads\\\/team\\\/5ea51fd3-a200-4035-ac02-d9edc4362285.png\",\"team3_category\":\"test\",\"team3_title\":\"Titulo 11\",\"team3_description\":\"Lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet, lorem, ipsum, dolor sit amet\"}"
+    }
+]

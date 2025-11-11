@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoUI Injector</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FF6B35" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#FF6B35" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#FF6B35" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1>NeoUI Injector</h1>
+        </div>
+        
+        <div class="status" id="status">
+            <div class="status-indicator" id="statusIndicator"></div>
+            <span id="statusText">Listo para inyectar</span>
+        </div>
+        
+        <div class="actions">
+            <button id="injectBtn" class="inject-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Inyectar NeoUI
+            </button>
+            
+            <button id="removeBtn" class="remove-btn" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Remover NeoUI
+            </button>
+        </div>
+               
+        <div class="footer">
+            <p>v1.0 - Desarrollado por Neoxygen</p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
