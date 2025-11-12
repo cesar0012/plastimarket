@@ -318,4 +318,17 @@ $contact = !empty($contactData) ? array_merge($contactDefaults, json_decode($con
         </section>
     </main>
 
+    <style>
+        div#faqAccordion {
+            border-radius: 6px;
+        }
+
+        .accordion-header {
+            background: #f96b0f;
+            padding: 0px;
+            border: 1px solid #f96b0f;
+            border-radius: 0px;
+        }
+    </style>
+
 <?php include 'footer.php'; ?>

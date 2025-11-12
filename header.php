@@ -87,7 +87,7 @@ $global = !empty($globalData) ? array_merge($globalDefaults, $globalData[0]) : $
         </nav>
     </header>
 
-    <!-- Categories Sidebar Menu -->
+    <!-- Categories Sidebar Menu (Updated from index_backup.html) -->
     <div class="offcanvas offcanvas-end categories-offcanvas" tabindex="-1" id="categoriesMenu" aria-labelledby="categoriesMenuLabel">
         <div class="offcanvas-header">
             <div class="header-content">
@@ -112,9 +112,159 @@ $global = !empty($globalData) ? array_merge($globalDefaults, $globalData[0]) : $
             </div>
             <nav class="categories-nav">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="/">INICIO</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tienda">TIENDA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contacto">CONTACTO</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="bebidas">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-wine-bottle"></i></div>
+                                <div class="text-content"><span class="category-name">BEBIDAS</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="bebidas">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-glass-whiskey"></i>Refrescos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i>Jugos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-tint"></i>Agua</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="cocina">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+                                <div class="text-content"><span class="category-name">COCINA</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="cocina">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-blender"></i>Utensilios</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-fire"></i>Ollas y Sartenes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-microchip"></i>Electrodomésticos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="decoracion">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-home"></i></div>
+                                <div class="text-content"><span class="category-name">DECORACIÓN HOGAR</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="decoracion">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-star"></i>Adornos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-image"></i>Cuadros</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-seedling"></i>Plantas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-plug"></i></div>
+                                <div class="text-content"><span class="category-name">ELECTRODOMÉSTICOS</span><span class="category-count">15 productos</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="ferreteria">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-tools"></i></div>
+                                <div class="text-content"><span class="category-name">FERRETERÍA</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="ferreteria">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-hammer"></i>Herramientas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-bolt"></i>Tornillos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush"></i>Pinturas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-baby"></i></div>
+                                <div class="text-content"><span class="category-name">INFANTIL</span><span class="category-count">8 productos</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
+                                <div class="text-content"><span class="category-name">IMPORTACIÓN</span><span class="category-count">12 productos</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="limpieza">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-spray-can"></i></div>
+                                <div class="text-content"><span class="category-name">LIMPIEZA Y BAÑO</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="limpieza">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-soap"></i>Detergentes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shield-virus"></i>Desinfectantes</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-toilet-paper"></i>Papel Higiénico</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="muebles">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-chair"></i></div>
+                                <div class="text-content"><span class="category-name">MUEBLES</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="muebles">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-chair"></i>Sillas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-table"></i>Mesas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-archive"></i>Estantes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="mesa-bar">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-glass-cheers"></i></div>
+                                <div class="text-content"><span class="category-name">MESA Y BAR</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="mesa-bar">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-wine-glass"></i>Vasos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-circle"></i>Platos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-utensils"></i>Cubiertos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-paw"></i></div>
+                                <div class="text-content"><span class="category-name">MASCOTAS</span><span class="category-count">6 productos</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item special-offer">
+                        <a class="nav-link" href="#">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-fire"></i></div>
+                                <div class="text-content"><span class="category-name">OFERTAS</span><span class="category-count">¡HOT!</span></div>
+                                <div class="pulse-effect"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" data-category="organizacion">
+                            <div class="nav-content">
+                                <div class="icon-wrapper"><i class="fas fa-boxes"></i></div>
+                                <div class="text-content"><span class="category-name">ORGANIZACIÓN</span><span class="category-count">3 productos</span></div>
+                                <div class="arrow-wrapper"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" data-category="organizacion">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-box"></i>Cajas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cube"></i>Contenedores</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-layer-group"></i>Organizadores</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
