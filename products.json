@@ -1,0 +1,63 @@
+
+[
+  {
+    "id": 1,
+    "name": "Bomba de agua",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2024-10-04T132637.010.png?v=1728322304",
+    "rating": 5,
+    "reviews_count": 24,
+    "wholesale_min_quantity": 12,
+    "retail_price": 49.00,
+    "savings_text": "Ahorra $12.00 en mayoreo"
+  },
+  {
+    "id": 2,
+    "name": "TAZÓN MELAMINA TIPO PELTRE",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T143429.208.png?v=1740616218",
+    "rating": 4,
+    "reviews_count": 18,
+    "wholesale_min_quantity": 24,
+    "retail_price": 21.00,
+    "savings_text": "Ahorra $5.25 en mayoreo"
+  },
+  {
+    "id": 3,
+    "name": "PLATO SOPERO MELAMINA 8\" TIPO PELTRE",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T142040.839.png",
+    "rating": 5,
+    "reviews_count": 31,
+    "wholesale_min_quantity": 36,
+    "retail_price": 15.00,
+    "savings_text": "Ahorra $3.75 en mayoreo"
+  },
+  {
+    "id": 4,
+    "name": "TAZÓN MELAMINA TIPO PELTRE",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135955.543.png",
+    "rating": 4,
+    "reviews_count": 15,
+    "wholesale_min_quantity": 48,
+    "retail_price": 11.50,
+    "savings_text": "Ahorra $2.88 en mayoreo"
+  },
+  {
+    "id": 5,
+    "name": "TAZÓN MELAMINA TIPO PELTRE",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T135024.519.png?v=1740615808",
+    "rating": 5,
+    "reviews_count": 22,
+    "wholesale_min_quantity": 20,
+    "retail_price": 19.00,
+    "savings_text": "Ahorra $4.75 en mayoreo"
+  },
+  {
+    "id": 6,
+    "name": "TAZÓN MELAMINA TIPO PELTRE",
+    "image_url": "https://f7df04-41.myshopify.com/cdn/shop/files/SINFONDO-Photoroom-2025-01-30T133357.509.png?v=1740615892",
+    "rating": 4,
+    "reviews_count": 19,
+    "wholesale_min_quantity": 30,
+    "retail_price": 12.00,
+    "savings_text": "Ahorra $3.00 en mayoreo"
+  }
+]
