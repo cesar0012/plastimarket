@@ -1,10 +1,55 @@
 <?php
-// Define page-specific variables for the header
-$page_title = 'PLASTIMARKET - Tu tienda de comercio electrónico';
-$page = 'index'; // Used for active navigation link
+// --- Simple Front-Controller / Router ---
 
-// Include the dynamic header
-require_once 'header.php';
+// Get the requested page from the URL, default to 'home'
+$page_request = $_GET['page'] ?? 'home';
+
+// Sanitize the page name to prevent directory traversal attacks
+$page_request = basename($page_request);
+
+// A whitelist of allowed pages to include for security
+$allowed_pages = [
+    'home',
+    'index',
+    'login',
+    'registro',
+    'tienda',
+    'producto',
+    'carrito',
+    'checkout',
+    'contacto',
+    'quienes-somos',
+    'politica-privacidad',
+    'perfil',
+    'pedidos',
+    'favoritos',
+    'direcciones',
+    'mayorista',
+    'dashboard',
+    'users/dashboard',
+    'users/perfil',
+    'users/pedidos',
+    'users/pedido-detalles',
+];
+
+// Check if the requested page is in our whitelist and exists
+$file_to_include = __DIR__ . '/' . $page_request . '.php';
+
+if (in_array($page_request, $allowed_pages) && file_exists($file_to_include)) {
+    // The page is valid and exists, so include it.
+    // The included file (e.g., login.php, tienda.php) is responsible
+    // for including its own header and footer.
+    require_once $file_to_include;
+
+} elseif ($page_request === 'home' || $page_request === 'index') {
+    // --- THIS IS THE ORIGINAL HOMEPAGE CONTENT ---
+
+    // Define page-specific variables for the header
+    $page_title = 'PLASTIMARKET - Tu tienda de comercio electrónico';
+    $page = 'index'; // Used for active navigation link
+
+    // Include the dynamic header
+    require_once 'header.php';
 ?>
 
 <!-- ========= START OF PAGE CONTENT ========= -->
@@ -1613,437 +1658,6 @@ require_once 'header.php';
             overflow: hidden;
             transform: translateY(20px);
             opacity: 0;
-        }
-        
-        .policy-card.animate {
-            animation: slideInUp 0.6s ease forwards;
-        }
-        
-        .policy-card:nth-child(1) { animation-delay: 0.1s; }
-        .policy-card:nth-child(2) { animation-delay: 0.2s; }
-        .policy-card:nth-child(3) { animation-delay: 0.3s; }
-        .policy-card:nth-child(4) { animation-delay: 0.4s; }
-        .policy-card:nth-child(5) { animation-delay: 0.5s; }
-        .policy-card:nth-child(6) { animation-delay: 0.6s; }
-        
-        @keyframes slideInUp {
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .policy-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #FF6B35, #E55A2B);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .policy-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
-        }
-        
-        .policy-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .policy-card.featured {
-            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
-            color: white;
-        }
-        
-        .policy-card.featured .policy-icon {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-        
-        .policy-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #FF6B35, #E55A2B);
-            color: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .policy-card:hover .policy-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-        
-        .policy-card h3 {
-            margin: 0 0 15px 0;
-            font-size: 18px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-        
-        .policy-card.featured h3 {
-            color: white;
-        }
-        
-        .policy-card p {
-            margin: 0 0 15px 0;
-            color: #6c757d;
-            line-height: 1.6;
-            font-size: 14px;
-        }
-        
-        .policy-card.featured p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .policy-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .highlight-tag {
-            background: linear-gradient(135deg, #FF6B35, #E55A2B);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        
-        .policy-card.featured .highlight-tag {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        
-        .contact-info {
-            margin-top: 15px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-        
-        .contact-item i {
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* Modal Footer */
-        .custom-modal-footer {
-            padding: 25px 30px;
-            background: #f8f9fa;
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
-            border-top: 1px solid #e9ecef;
-        }
-        
-        .btn-secondary-custom, .btn-primary-custom {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-secondary-custom {
-            background: #6c757d;
-            color: white;
-        }
-        
-        .btn-secondary-custom:hover {
-            background: #5a6268;
-            transform: translateY(-2px);
-        }
-        
-        .btn-primary-custom {
-            background: linear-gradient(135deg, #FF6B35, #E55A2B);
-            color: white;
-        }
-        
-        .btn-primary-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
-        }
-        
-        /* Floating Button */
-        .floating-policy-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
-            color: white;
-            border: none;
-            border-radius: 60px;
-            padding: 0;
-            width: 180px;
-            height: 60px;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
-            overflow: hidden;
-            z-index: 99999;
-        }
-        
-        .floating-policy-btn:hover {
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
-        }
-        
-        .btn-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 18px 24px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .btn-icon {
-            font-size: 18px;
-            transition: transform 0.3s ease;
-        }
-        
-        .floating-policy-btn:hover .btn-icon {
-            transform: scale(1.2) rotate(10deg);
-        }
-        
-        .btn-text {
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-ripple {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.6s ease;
-        }
-        
-        .floating-policy-btn:active .btn-ripple {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .btn-glow {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate-glow 4s linear infinite;
-            opacity: 0;
-        }
-        
-        .floating-policy-btn:hover .btn-glow {
-            opacity: 1;
-        }
-        
-        @keyframes rotate-glow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .custom-modal-container {
-                margin: 10px;
-                max-height: 95vh;
-            }
-            
-            .custom-modal-header {
-                padding: 20px;
-            }
-            
-            .title-content h2 {
-                font-size: 22px;
-            }
-            
-            .custom-modal-body {
-                padding: 20px;
-            }
-            
-            .policy-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .floating-policy-btn {
-                width: 160px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .btn-content {
-                padding: 15px 20px;
-            }
-            
-            .btn-text {
-                font-size: 13px;
-            }
-        }
-        
-        
-        .custom-modal-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
-            opacity: 0.3;
-        }
-        
-        .modal-title-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .title-icon-wrapper {
-            position: relative;
-        }
-        
-        .title-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .icon-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-        
-        .title-content h2 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .title-content p {
-            margin: 5px 0 0 0;
-            opacity: 0.9;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        
-        .custom-modal-close {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .custom-modal-close:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(90deg) scale(1.1);
-        }
-        
-        /* Modal Body */
-        .custom-modal-body {
-            padding: 40px 30px;
-            max-height: 60vh;
-            overflow-y: auto;
-            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-        }
-        
-        .custom-modal-body::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .custom-modal-body::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-        }
-        
-        .custom-modal-body::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #FF6B35, #E55A2B);
-            border-radius: 4px;
-        }
-        
-        /* Policy Grid */
-        .policy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 25px;
-        }
-        
-        .policy-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 107, 53, 0.1);
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-            transform: translateY(20px);
-            opacity: 0;
             animation: slideInUp 0.6s ease forwards;
         }
         
@@ -2441,6 +2055,16 @@ require_once 'header.php';
     </script>
 
 <?php
-// Include the dynamic footer
-require_once 'footer.php';
+    // Include the dynamic footer
+    require_once 'footer.php';
+
+} else {
+    // The page is not in the whitelist or doesn't exist, show a 404 error.
+    http_response_code(404);
+    if (file_exists(__DIR__ . '/404.php')) {
+        include '404.php';
+    } else {
+        echo "<h1>404 Not Found</h1><p>La página solicitada no fue encontrada.</p>";
+    }
+}
 ?>
