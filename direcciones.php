@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Direcciones - PLASTIMARKET</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/members.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Barra de Anuncios Superior -->
-    <div class="announcement-bar">
-        <div class="container-fluid">
-            <p class="text-center mb-0">¡ENVÍO GRATIS en compras mayores a $50!</p>
-        </div>
-    </div>
+<?php
+// Define page-specific variables
+$page_title = 'Mis Direcciones - PLASTIMARKET';
+$page_description = 'Gestiona tus direcciones de envío y facturación.';
+$page_keywords = 'PlastiMarket, direcciones, envío, facturación, cuenta';
+$page_css = 'assets/css/members.css';
+$page_js = 'assets/js/members.js';
 
-    <!-- Header Principal -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-4">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="logo">
-                </a>
-
-                <!-- Desktop Navigation -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-
-                <!-- Header Icons -->
-                <div class="header-icons">
-                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-search"></i></a>
-                    <div class="user-dropdown dropdown d-none d-lg-inline">
-                        <a href="#" class="icon-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-user"></i>
-                            <span class="user-name">Juan Pérez</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Mi Cuenta</a></li>
-                            <li><a class="dropdown-item" href="pedidos.html"><i class="fas fa-box"></i> Mis Pedidos</a></li>
-                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user-edit"></i> Mi Perfil</a></li>
-                            <li><a class="dropdown-item" href="mayorista.html"><i class="fas fa-building"></i> Panel Mayorista</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
-                        </ul>
-                    </div>
-                    <a href="carrito.html" class="icon-link d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
-                    <button class="categories-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+include 'header.php';
+?>
 
     <!-- Addresses Section -->
     <section class="dashboard-section py-5">
@@ -114,46 +49,46 @@
                         <nav class="sidebar-nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
-                                    <a href="dashboard.html" class="nav-link">
+                                    <a href="dashboard.php" class="nav-link">
                                         <i class="fas fa-tachometer-alt"></i>
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pedidos.html" class="nav-link">
+                                    <a href="pedidos.php" class="nav-link">
                                         <i class="fas fa-box"></i>
                                         <span>Mis Pedidos</span>
                                         <span class="badge">3</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="perfil.html" class="nav-link">
+                                    <a href="perfil.php" class="nav-link">
                                         <i class="fas fa-user-edit"></i>
                                         <span>Mi Perfil</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="favoritos.html" class="nav-link">
+                                    <a href="favoritos.php" class="nav-link">
                                         <i class="fas fa-heart"></i>
                                         <span>Favoritos</span>
                                         <span class="badge">12</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="mayorista.html" class="nav-link">
+                                    <a href="mayorista.php" class="nav-link">
                                         <i class="fas fa-building"></i>
                                         <span>Panel Mayorista</span>
                                         <span class="badge badge-premium">PRO</span>
                                     </a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a href="direcciones.html" class="nav-link">
+                                    <a href="direcciones.php" class="nav-link">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>Direcciones</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="configuracion.html" class="nav-link">
+                                    <a href="configuracion.php" class="nav-link">
                                         <i class="fas fa-cog"></i>
                                         <span>Configuración</span>
                                     </a>
@@ -536,340 +471,4 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="main-footer py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">
-                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="footer-logo mb-3">
-                        <p class="footer-description">Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Quick links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Búsqueda</a></li>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="quienes-somos.html">Quienes Somos</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Categorías</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Cocina</a></li>
-                        <li><a href="#">Decoración</a></li>
-                        <li><a href="#">Limpieza</a></li>
-                        <li><a href="#">Electrodomésticos</a></li>
-                        <li><a href="#">Ferretería</a></li>
-                        <li><a href="#">Muebles</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <div class="footer-info">
-                        <p>© 2025, PLASTIMARKET</p>                        
-                        <p><a href="#">Política de privacidad</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/members.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Addresses functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const addressForm = document.getElementById('addressForm');
-            const saveAddressBtn = document.getElementById('saveAddress');
-            const addressModal = new bootstrap.Modal(document.getElementById('addAddressModal'));
-            const deleteModal = new bootstrap.Modal(document.getElementById('deleteAddressModal'));
-            const confirmDeleteBtn = document.getElementById('confirmDeleteAddress');
-            
-            let currentAddressId = null;
-            let addressToDelete = null;
-            
-            // Edit address functionality
-            document.querySelectorAll('.edit-address').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const addressId = this.dataset.addressId;
-                    loadAddressForEdit(addressId);
-                    addressModal.show();
-                });
-            });
-            
-            // Delete address functionality
-            document.querySelectorAll('.delete-address').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    addressToDelete = this.dataset.addressId;
-                    deleteModal.show();
-                });
-            });
-            
-            // Set as default functionality
-            document.querySelectorAll('.set-default').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const addressId = this.dataset.addressId;
-                    setDefaultAddress(addressId);
-                });
-            });
-            
-            // Save address
-            if (saveAddressBtn) {
-                saveAddressBtn.addEventListener('click', function() {
-                    if (validateAddressForm()) {
-                        saveAddress();
-                    }
-                });
-            }
-            
-            // Confirm delete
-            if (confirmDeleteBtn) {
-                confirmDeleteBtn.addEventListener('click', function() {
-                    if (addressToDelete) {
-                        deleteAddress(addressToDelete);
-                        deleteModal.hide();
-                    }
-                });
-            }
-            
-            // Address type filter
-            const addressTypeFilter = document.getElementById('addressTypeFilter');
-            if (addressTypeFilter) {
-                addressTypeFilter.addEventListener('change', function() {
-                    filterAddresses(this.value);
-                });
-            }
-            
-            // Reset modal when closed
-            document.getElementById('addAddressModal').addEventListener('hidden.bs.modal', function() {
-                resetAddressForm();
-            });
-            
-            function loadAddressForEdit(addressId) {
-                // Mock data - in real app, this would fetch from server
-                const addresses = {
-                    '1': {
-                        title: 'Casa',
-                        type: 'both',
-                        firstName: 'Juan',
-                        lastName: 'Pérez',
-                        addressLine1: 'Calle Principal #123, Colonia Centro',
-                        addressLine2: '',
-                        city: 'San Salvador',
-                        state: 'San Salvador',
-                        postalCode: '',
-                        phone: '+503 1234-5678',
-                        instructions: '',
-                        isDefault: true
-                    },
-                    '2': {
-                        title: 'Oficina',
-                        type: 'shipping',
-                        firstName: 'Juan',
-                        lastName: 'Pérez',
-                        addressLine1: 'Edificio Torre Empresarial, Oficina 501',
-                        addressLine2: '',
-                        city: 'Santa Tecla',
-                        state: 'La Libertad',
-                        postalCode: '',
-                        phone: '+503 2345-6789',
-                        instructions: 'Entregar en recepción',
-                        isDefault: false
-                    },
-                    '3': {
-                        title: 'Casa de Padres',
-                        type: 'billing',
-                        firstName: 'María',
-                        lastName: 'Pérez',
-                        addressLine1: 'Avenida Los Próceres #456, Colonia Escalón',
-                        addressLine2: '',
-                        city: 'San Salvador',
-                        state: 'San Salvador',
-                        postalCode: '',
-                        phone: '+503 3456-7890',
-                        instructions: '',
-                        isDefault: false
-                    }
-                };
-                
-                const address = addresses[addressId];
-                if (address) {
-                    currentAddressId = addressId;
-                    document.getElementById('addressModalTitle').innerHTML = '<i class="fas fa-edit"></i> Editar Dirección';
-                    document.getElementById('addressId').value = addressId;
-                    document.getElementById('addressTitle').value = address.title;
-                    document.getElementById('addressType').value = address.type;
-                    document.getElementById('firstName').value = address.firstName;
-                    document.getElementById('lastName').value = address.lastName;
-                    document.getElementById('addressLine1').value = address.addressLine1;
-                    document.getElementById('addressLine2').value = address.addressLine2;
-                    document.getElementById('city').value = address.city;
-                    document.getElementById('state').value = address.state;
-                    document.getElementById('postalCode').value = address.postalCode;
-                    document.getElementById('phone').value = address.phone;
-                    document.getElementById('instructions').value = address.instructions;
-                    document.getElementById('setAsDefault').checked = address.isDefault;
-                }
-            }
-            
-            function resetAddressForm() {
-                currentAddressId = null;
-                document.getElementById('addressModalTitle').innerHTML = '<i class="fas fa-plus"></i> Agregar Nueva Dirección';
-                addressForm.reset();
-                document.getElementById('addressId').value = '';
-            }
-            
-            function validateAddressForm() {
-                const requiredFields = ['addressTitle', 'addressType', 'firstName', 'lastName', 'addressLine1', 'city', 'state', 'phone'];
-                let isValid = true;
-                
-                requiredFields.forEach(fieldId => {
-                    const field = document.getElementById(fieldId);
-                    if (!field.value.trim()) {
-                        field.classList.add('is-invalid');
-                        isValid = false;
-                    } else {
-                        field.classList.remove('is-invalid');
-                    }
-                });
-                
-                return isValid;
-            }
-            
-            function saveAddress() {
-                const formData = {
-                    id: currentAddressId,
-                    title: document.getElementById('addressTitle').value,
-                    type: document.getElementById('addressType').value,
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    addressLine1: document.getElementById('addressLine1').value,
-                    addressLine2: document.getElementById('addressLine2').value,
-                    city: document.getElementById('city').value,
-                    state: document.getElementById('state').value,
-                    postalCode: document.getElementById('postalCode').value,
-                    phone: document.getElementById('phone').value,
-                    instructions: document.getElementById('instructions').value,
-                    isDefault: document.getElementById('setAsDefault').checked
-                };
-                
-                // In real app, this would send to server
-                console.log('Saving address:', formData);
-                
-                showNotification(
-                    currentAddressId ? 'Dirección actualizada exitosamente' : 'Dirección agregada exitosamente',
-                    'success'
-                );
-                
-                addressModal.hide();
-                
-                // Refresh addresses list
-                setTimeout(() => {
-                    location.reload();
-                }, 1000);
-            }
-            
-            function deleteAddress(addressId) {
-                // In real app, this would send delete request to server
-                console.log('Deleting address:', addressId);
-                
-                showNotification('Dirección eliminada exitosamente', 'success');
-                
-                // Remove address card from DOM
-                const addressCard = document.querySelector(`[data-address-id="${addressId}"]`);
-                if (addressCard) {
-                    addressCard.remove();
-                }
-                
-                addressToDelete = null;
-            }
-            
-            function setDefaultAddress(addressId) {
-                // In real app, this would send request to server
-                console.log('Setting default address:', addressId);
-                
-                // Update UI
-                document.querySelectorAll('.address-card').forEach(card => {
-                    card.classList.remove('primary');
-                    const badge = card.querySelector('.badge-primary');
-                    if (badge) badge.remove();
-                    
-                    const defaultBtn = card.querySelector('.set-default');
-                    if (defaultBtn) {
-                        defaultBtn.disabled = false;
-                        defaultBtn.innerHTML = '<i class="fas fa-star"></i> Establecer como Principal';
-                    }
-                });
-                
-                const targetCard = document.querySelector(`[data-address-id="${addressId}"]`);
-                if (targetCard) {
-                    targetCard.classList.add('primary');
-                    const badges = targetCard.querySelector('.address-badges');
-                    badges.insertAdjacentHTML('afterbegin', '<span class="badge badge-primary">PRINCIPAL</span>');
-                    
-                    const defaultBtn = targetCard.querySelector('.set-default');
-                    if (defaultBtn) {
-                        defaultBtn.disabled = true;
-                        defaultBtn.innerHTML = '<i class="fas fa-star"></i> Dirección Principal';
-                    }
-                }
-                
-                showNotification('Dirección principal actualizada', 'success');
-            }
-            
-            function filterAddresses(type) {
-                const addressCards = document.querySelectorAll('.address-card:not(.add-new)');
-                
-                addressCards.forEach(card => {
-                    if (!type) {
-                        card.style.display = 'block';
-                        return;
-                    }
-                    
-                    const badges = card.querySelectorAll('.badge');
-                    let hasType = false;
-                    
-                    badges.forEach(badge => {
-                        const badgeText = badge.textContent.toLowerCase();
-                        if (
-                            (type === 'shipping' && badgeText === 'envío') ||
-                            (type === 'billing' && badgeText === 'facturación') ||
-                            (type === 'both' && (badgeText === 'envío' || badgeText === 'facturación'))
-                        ) {
-                            hasType = true;
-                        }
-                    });
-                    
-                    card.style.display = hasType ? 'block' : 'none';
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+<?php include 'footer.php'; ?>

@@ -1,3 +1,7 @@
+<?php
+// Incluir archivos necesarios para contenido dinámico
+require_once 'admin/includes/config.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +28,7 @@
     <!-- Barra de Anuncios Superior -->
     <div class="announcement-bar">
         <div class="container-fluid">
-            <p class="text-center mb-0">¡PRECIOS EXCLUSIVOS A MAYORISTAS!</p>
+            <p class="text-center mb-0"><?= get_content('announcement_bar', 'message', '¡PRECIOS EXCLUSIVOS A MAYORISTAS!') ?></p>
         </div>
     </div>
 
@@ -34,7 +38,7 @@
             <div class="container-fluid px-4">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="logo">
+                    <img src="<?= get_content('header', 'logo_url', 'https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170') ?>" alt="<?= get_content('header', 'logo_alt', 'PLASTIMARKET') ?>" class="logo">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -355,17 +359,17 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
-                                <span class="hero-badge" data-aos="fade-up" data-aos-delay="100">¡Nuevos Productos!</span>
-                                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Surte tu negocio ahora ¡Y ahorra!</h1>
-                                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">ACCEDE A PRECIOS EXCLUSIVOS DE MAYOREO</p>
+                                <span class="hero-badge" data-aos="fade-up" data-aos-delay="100"><?= get_content('hero_section', 'badge_text', '¡Nuevos Productos!') ?></span>
+                                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200"><?= get_content('hero_section', 'main_title', 'Surte tu negocio ahora ¡Y ahorra!') ?></h1>
+                                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300"><?= get_content('hero_section', 'subtitle', 'ACCEDE A PRECIOS EXCLUSIVOS DE MAYOREO') ?></p>
                                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                                    <a href="#" class="btn btn-primary hero-btn me-3">QUIERO SER MAYORISTA</a>
-                                    <a href="#" class="btn btn-outline-light hero-btn-secondary">Ver Ofertas</a>
+                                    <a href="<?= get_content('hero_section', 'primary_button_url', '#') ?>" class="btn btn-primary hero-btn me-3"><?= get_content('hero_section', 'primary_button_text', 'QUIERO SER MAYORISTA') ?></a>
+                                    <a href="<?= get_content('hero_section', 'secondary_button_url', '#') ?>" class="btn btn-outline-light hero-btn-secondary"><?= get_content('hero_section', 'secondary_button_text', 'Ver Ofertas') ?></a>
                                 </div>
                             </div>
                             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="500">
                                 <div class="hero-image-wrapper">
-                                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="Plastimarket Logo" class="hero-product-img">
+                                    <img src="<?= get_content('hero_section', 'hero_image_url', 'https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170') ?>" alt="<?= get_content('hero_section', 'hero_image_alt', 'Plastimarket Logo') ?>" class="hero-product-img">
                                 </div>
                             </div>
                         </div>
@@ -387,7 +391,7 @@
                                 <path d="M20.59 22C20.59 18.13 16.74 15 12 15C7.26 15 3.41 18.13 3.41 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">ATENCIÓN PERSONALIZADA</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_1_title', 'ATENCIÓN PERSONALIZADA') ?></h6>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
@@ -398,7 +402,7 @@
                                 <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6312 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6312 13.6815 18 14.5717 18 15.5C18 16.4283 17.6312 17.3185 16.9749 17.9749C16.3185 18.6312 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">PRECIOS EXCLUSIVOS</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_2_title', 'PRECIOS EXCLUSIVOS') ?></h6>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
@@ -411,7 +415,7 @@
                                 <path d="M16 8L18 10L22 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">CONVENIOS CON PAQUETERÍAS</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_3_title', 'CONVENIOS CON PAQUETERÍAS') ?></h6>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
@@ -425,7 +429,7 @@
                                 <polyline points="12,22.08 12,16.91" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">PRODUCTOS NUEVOS CADA SEMANA</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_4_title', 'PRODUCTOS NUEVOS CADA SEMANA') ?></h6>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
@@ -438,7 +442,7 @@
                                 <path d="M6 18L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">RESEÑAS DE CLIENTES</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_5_title', 'RESEÑAS DE CLIENTES') ?></h6>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
@@ -450,7 +454,7 @@
                                 <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h6 class="feature-title">+20 AÑOS DE EXPERIENCIA</h6>
+                        <h6 class="feature-title"><?= get_content('features_section', 'feature_6_title', '+20 AÑOS DE EXPERIENCIA') ?></h6>
                     </div>
                 </div>
             </div>
@@ -1506,8 +1510,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand">
-                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="footer-logo mb-3">
-                        <p class="footer-description">Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.</p>
+                        <img src="<?= get_content('footer', 'logo_url', 'https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170') ?>" alt="PLASTIMARKET" class="footer-logo mb-3">
+                        <p class="footer-description"><?= get_content('footer', 'description', 'Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.') ?></p>
                     </div>
                 </div>
                 <div class="col-lg-2 mb-4">
@@ -1534,14 +1538,14 @@
                 <div class="col-lg-2 mb-4">
                     <h5>Síguenos</h5>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="<?= get_content('footer', 'facebook_url', '#') ?>"><i class="fab fa-facebook"></i></a>
+                        <a href="<?= get_content('footer', 'instagram_url', '#') ?>"><i class="fab fa-instagram"></i></a>
+                        <a href="<?= get_content('footer', 'tiktok_url', '#') ?>"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 mb-4">
                     <div class="footer-info">
-                        <p>© 2025, PLASTIMARKET</p>                        
+                        <p><?= get_content('footer', 'copyright_text', '© 2025, PLASTIMARKET') ?></p>                        
                         <p><a href="#">Política de privacidad</a></p>
                     </div>
                 </div>

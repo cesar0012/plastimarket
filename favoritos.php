@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Favoritos - PLASTIMARKET</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/members.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Barra de Anuncios Superior -->
-    <div class="announcement-bar">
-        <div class="container-fluid">
-            <p class="text-center mb-0">¡PRECIOS EXCLUSIVOS A MAYORISTAS!</p>
-        </div>
-    </div>
+<?php
+// Define page-specific variables
+$page_title = 'Mis Favoritos - PLASTIMARKET';
+$page_description = 'Productos que has guardado para más tarde.';
+$page_keywords = 'PlastiMarket, favoritos, lista de deseos, cuenta';
+$page_css = 'assets/css/members.css';
+$page_js = 'assets/js/members.js';
 
-    <!-- Header Principal -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-4">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="logo">
-                </a>
-
-                <!-- Desktop Navigation -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-
-                <!-- Header Icons -->
-                <div class="header-icons">
-                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-search"></i></a>
-                    <div class="user-dropdown dropdown d-none d-lg-inline">
-                        <a href="#" class="icon-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-user"></i>
-                            <span class="user-name">Juan Pérez</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Mi Cuenta</a></li>
-                            <li><a class="dropdown-item" href="pedidos.html"><i class="fas fa-box"></i> Mis Pedidos</a></li>
-                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user-edit"></i> Mi Perfil</a></li>
-                            <li><a class="dropdown-item" href="mayorista.html"><i class="fas fa-building"></i> Panel Mayorista</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
-                        </ul>
-                    </div>
-                    <a href="carrito.html" class="icon-link d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
-                    <button class="categories-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+include 'header.php';
+?>
 
     <!-- Favorites Section -->
     <section class="dashboard-section py-5">
@@ -120,46 +55,46 @@
                         <nav class="sidebar-nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
-                                    <a href="dashboard.html" class="nav-link">
+                                    <a href="dashboard.php" class="nav-link">
                                         <i class="fas fa-tachometer-alt"></i>
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pedidos.html" class="nav-link">
+                                    <a href="pedidos.php" class="nav-link">
                                         <i class="fas fa-box"></i>
                                         <span>Mis Pedidos</span>
                                         <span class="badge">3</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="perfil.html" class="nav-link">
+                                    <a href="perfil.php" class="nav-link">
                                         <i class="fas fa-user-edit"></i>
                                         <span>Mi Perfil</span>
                                     </a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a href="favoritos.html" class="nav-link">
+                                    <a href="favoritos.php" class="nav-link">
                                         <i class="fas fa-heart"></i>
                                         <span>Favoritos</span>
                                         <span class="badge">12</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="mayorista.html" class="nav-link">
+                                    <a href="mayorista.php" class="nav-link">
                                         <i class="fas fa-building"></i>
                                         <span>Panel Mayorista</span>
                                         <span class="badge badge-premium">PRO</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="direcciones.html" class="nav-link">
+                                    <a href="direcciones.php" class="nav-link">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>Direcciones</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="configuracion.html" class="nav-link">
+                                    <a href="configuracion.php" class="nav-link">
                                         <i class="fas fa-cog"></i>
                                         <span>Configuración</span>
                                     </a>
@@ -449,7 +384,7 @@
                             </div>
                             <h3>No tienes productos favoritos</h3>
                             <p class="text-muted mb-4">Explora nuestra tienda y guarda los productos que más te gusten</p>
-                            <a href="tienda.html" class="btn btn-primary">
+                            <a href="tienda.php" class="btn btn-primary">
                                 <i class="fas fa-shopping-bag"></i>
                                 Explorar Tienda
                             </a>
@@ -533,7 +468,7 @@
                                         <i class="fas fa-shopping-cart"></i>
                                         Agregar al Carrito
                                     </button>
-                                    <a href="producto.html" class="btn btn-outline-primary w-100">
+                                    <a href="producto.php" class="btn btn-outline-primary w-100">
                                         Ver Detalles Completos
                                     </a>
                                 </div>
@@ -545,236 +480,4 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="main-footer py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">
-                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="footer-logo mb-3">
-                        <p class="footer-description">Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Quick links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Búsqueda</a></li>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="quienes-somos.html">Quienes Somos</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Categorías</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Cocina</a></li>
-                        <li><a href="#">Decoración</a></li>
-                        <li><a href="#">Limpieza</a></li>
-                        <li><a href="#">Electrodomésticos</a></li>
-                        <li><a href="#">Ferretería</a></li>
-                        <li><a href="#">Muebles</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <div class="footer-info">
-                        <p>© 2025, PLASTIMARKET</p>                        
-                        <p><a href="#">Política de privacidad</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/members.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Favorites functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const favoritesContainer = document.getElementById('favoritesContainer');
-            const emptyFavorites = document.getElementById('emptyFavorites');
-            const favoritesSearch = document.getElementById('favoritesSearch');
-            const bulkActions = document.getElementById('bulkActions');
-            const selectedCount = document.getElementById('selectedCount');
-            
-            let selectedItems = new Set();
-            
-            // Search functionality
-            if (favoritesSearch) {
-                favoritesSearch.addEventListener('input', function() {
-                    const searchTerm = this.value.toLowerCase();
-                    const favoriteItems = document.querySelectorAll('.favorite-item');
-                    
-                    favoriteItems.forEach(item => {
-                        const productName = item.dataset.name.toLowerCase();
-                        if (productName.includes(searchTerm)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            }
-            
-            // View toggle
-            document.querySelectorAll('[data-view]').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const view = this.dataset.view;
-                    const favoritesGrid = document.getElementById('favoritesGrid');
-                    
-                    // Update active button
-                    document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Update grid class
-                    if (view === 'list') {
-                        favoritesGrid.classList.add('list-view');
-                    } else {
-                        favoritesGrid.classList.remove('list-view');
-                    }
-                });
-            });
-            
-            // Sort functionality
-            document.querySelectorAll('[data-sort]').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sortType = this.dataset.sort;
-                    const favoriteItems = Array.from(document.querySelectorAll('.favorite-item'));
-                    
-                    favoriteItems.sort((a, b) => {
-                        switch(sortType) {
-                            case 'name':
-                                return a.dataset.name.localeCompare(b.dataset.name);
-                            case 'price-low':
-                                return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
-                            case 'price-high':
-                                return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
-                            case 'recent':
-                                return new Date(b.dataset.date) - new Date(a.dataset.date);
-                            default:
-                                return 0;
-                        }
-                    });
-                    
-                    // Re-append sorted items
-                    const container = favoritesContainer;
-                    favoriteItems.forEach(item => container.appendChild(item));
-                });
-            });
-            
-            // Remove from favorites
-            document.querySelectorAll('.btn-favorite').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const productId = this.dataset.productId;
-                    const favoriteItem = this.closest('.favorite-item');
-                    
-                    // Animate removal
-                    favoriteItem.style.transform = 'scale(0.8)';
-                    favoriteItem.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        favoriteItem.remove();
-                        
-                        // Check if no favorites left
-                        const remainingFavorites = document.querySelectorAll('.favorite-item');
-                        if (remainingFavorites.length === 0) {
-                            favoritesContainer.parentElement.classList.add('d-none');
-                            emptyFavorites.classList.remove('d-none');
-                        }
-                        
-                        // Update stats
-                        updateFavoritesStats();
-                        
-                        // Show notification
-                        showNotification('Producto eliminado de favoritos', 'info');
-                    }, 300);
-                });
-            });
-            
-            // Clear all favorites
-            document.getElementById('clearAllFavorites')?.addEventListener('click', function() {
-                if (confirm('¿Estás seguro de que quieres eliminar todos los favoritos?')) {
-                    const favoriteItems = document.querySelectorAll('.favorite-item');
-                    
-                    favoriteItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.style.transform = 'scale(0.8)';
-                            item.style.opacity = '0';
-                            
-                            setTimeout(() => {
-                                item.remove();
-                                
-                                if (index === favoriteItems.length - 1) {
-                                    favoritesContainer.parentElement.classList.add('d-none');
-                                    emptyFavorites.classList.remove('d-none');
-                                }
-                            }, 300);
-                        }, index * 100);
-                    });
-                    
-                    showNotification('Todos los favoritos han sido eliminados', 'info');
-                }
-            });
-            
-            // Add to cart from favorites
-            document.querySelectorAll('.add-to-cart').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const productCard = this.closest('.deals-product-card');
-                    const productTitle = productCard.querySelector('.product-title').textContent;
-                    const quantity = productCard.querySelector('.quantity-input').value;
-                    
-                    // Add to cart logic here
-                    showNotification(`${productTitle} agregado al carrito (${quantity} unidad${quantity > 1 ? 'es' : ''})`, 'success');
-                });
-            });
-            
-            // Update favorites stats
-            function updateFavoritesStats() {
-                const favoriteItems = document.querySelectorAll('.favorite-item');
-                const totalItems = favoriteItems.length;
-                let totalValue = 0;
-                
-                favoriteItems.forEach(item => {
-                    totalValue += parseFloat(item.dataset.price);
-                });
-                
-                // Update stats display
-                const statsNumbers = document.querySelectorAll('.stat-number');
-                if (statsNumbers[0]) statsNumbers[0].textContent = totalItems;
-                if (statsNumbers[1]) statsNumbers[1].textContent = `$${totalValue.toFixed(2)}`;
-                
-                // Update sidebar badge
-                const sidebarBadge = document.querySelector('.sidebar-nav .nav-item.active .badge');
-                if (sidebarBadge) sidebarBadge.textContent = totalItems;
-            }
-            
-            // Initialize stats
-            updateFavoritesStats();
-        });
-    </script>
-</body>
-</html>
+<?php include 'footer.php'; ?>

@@ -1,29 +1,12 @@
 <?php
-require_once 'admin/includes/database.php';
+// Define page-specific variables
+$page_title = 'Sobre Nosotros - PlastiMarket';
+$page_description = 'Conoce la historia de PlastiMarket, líder en productos de melamina y plásticos de alta calidad en El Salvador.';
+$page_keywords = 'PlastiMarket, historia, empresa, melamina, plásticos, El Salvador';
+$page_css = 'quienes-somos.css';
+$page_js = 'quienes-somos.js';
 
-$db = new AdminDatabase();
-
-// Helper function to safely handle htmlspecialchars with null values
-function safeHtml($value, $default = '') {
-    return htmlspecialchars($value ?? $default, ENT_QUOTES, 'UTF-8');
-}
-
-// Obtener datos globales (header, footer, barra de anuncios)
-$globalData = $db->getWhere('global_settings', ['id' => 1]);
-
-$globalDefaults = [
-    'announcement_message' => '¡PRECIOS EXCLUSIVOS A MAYORISTAS!',
-    'header_logo_url' => 'https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170',
-    'header_logo_alt' => 'PLASTIMARKET',
-    'footer_logo_url' => 'https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170',
-    'footer_description' => 'Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.',
-    'facebook_url' => '#',
-    'instagram_url' => '#',
-    'tiktok_url' => '#',
-    'copyright_text' => '© 2025, PLASTIMARKET'
-];
-
-$global = !empty($globalData) ? array_merge($globalDefaults, $globalData[0]) : $globalDefaults;
+include 'header.php';
 
 // Obtener datos específicos de la página Quienes Somos
 $quienesData = $db->getWhere('page_content', ['page' => 'quienes-somos']);
@@ -77,161 +60,12 @@ $quienesDefaults = [
     'cta_title' => '¿Listo para Descubrir Nuestros Productos?',
     'cta_description' => 'Explora nuestro catálogo completo y encuentra los productos perfectos para tu hogar',
     'cta_button_text' => 'Ver Tienda',
-    'cta_button_url' => 'tienda.html'
+    'cta_button_url' => '/tienda'
 ];
 
 $quienesDbData = !empty($quienesData) ? json_decode($quienesData[0]['content_value'], true) : [];
 $quienes = array_merge($quienesDefaults, $quienesDbData ?: []);
-?><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - PlastiMarket</title>
-    <meta name="description" content="Conoce la historia de PlastiMarket, líder en productos de melamina y plásticos de alta calidad en El Salvador.">
-    <meta name="keywords" content="PlastiMarket, historia, empresa, melamina, plásticos, El Salvador">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Quienes Somos Page CSS -->
-    <link rel="stylesheet" href="assets/css/quienes-somos.css">
-</head>
-<body class="nosotros-page">
-    <!-- Barra de Anuncios Superior -->
-    <div class="announcement-bar">
-        <div class="container-fluid">
-            <p class="text-center mb-0"><?= safeHtml($global['announcement_message']) ?></p>
-        </div>
-    </div>
-
-    <!-- Header Principal -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-4">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.php">
-                    <img src="<?= safeHtml($global['header_logo_url']) ?>" alt="<?= safeHtml($global['header_logo_alt']) ?>" class="logo">
-                </a>
-
-                <!-- Desktop Navigation -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.php">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="quienes-somos.php">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-
-                <!-- Barra de Búsqueda Integrada -->
-                <div class="search-wrapper d-none d-lg-flex">
-                    <form class="search-form d-flex">
-                        <select class="form-select search-category">
-                            <option selected>Todas las categorías</option>
-                            <option value="bebidas">Bebidas</option>
-                            <option value="cocina">Cocina</option>
-                            <option value="decoracion">Decoración</option>
-                            <option value="electrodomesticos">Electrodomésticos</option>
-                            <option value="ferreteria">Ferretería</option>
-                            <option value="limpieza">Limpieza</option>
-                            <option value="muebles">Muebles</option>
-                        </select>
-                        <div class="search-input-wrapper">
-                            <input type="text" class="form-control search-input" placeholder="Buscar productos, marcas o categorías...">
-                            <button type="submit" class="search-btn">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Header Icons and Categories Menu -->
-                <div class="header-icons">
-                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-search"></i></a>
-                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-user"></i></a>
-                    <a href="carrito.html" class="icon-link d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
-                    <!-- Categories Menu Toggle -->
-                    <button class="categories-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Categories Sidebar Menu -->
-    <div class="offcanvas offcanvas-end categories-offcanvas" tabindex="-1" id="categoriesMenu" aria-labelledby="categoriesMenuLabel">
-        <div class="offcanvas-header">
-            <div class="header-content">
-                <div class="header-icon">
-                    <i class="fas fa-th-large"></i>
-                </div>
-                <div class="header-text">
-                    <h5 class="offcanvas-title" id="categoriesMenuLabel">Categorías</h5>
-                    <span class="header-subtitle">Explora nuestros productos</span>
-                </div>
-            </div>
-            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Cerrar">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <div class="search-section">
-                <div class="search-wrapper">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" placeholder="Buscar categoría...">
-                </div>
-            </div>
-            <nav class="categories-nav">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <div class="nav-content">
-                                <div class="icon-wrapper">
-                                    <i class="fas fa-home"></i>
-                                </div>
-                                <div class="text-content">
-                                    <span class="category-name">INICIO</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tienda.html">
-                            <div class="nav-content">
-                                <div class="icon-wrapper">
-                                    <i class="fas fa-store"></i>
-                                </div>
-                                <div class="text-content">
-                                    <span class="category-name">TIENDA</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">
-                            <div class="nav-content">
-                                <div class="icon-wrapper">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="text-content">
-                                    <span class="category-name">CONTACTO</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+?>
 
     <!-- Hero Section -->
     <section class="nosotros-hero">
@@ -446,62 +280,4 @@ $quienes = array_merge($quienesDefaults, $quienesDbData ?: []);
         </div>
     </section>
 
-    <!-- Footer Expandido -->
-    <footer class="main-footer py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">
-                        <img src="<?= safeHtml($global['footer_logo_url']) ?>" alt="<?= safeHtml($global['header_logo_alt']) ?>" class="footer-logo mb-3">
-                        <p class="footer-description"><?= safeHtml($global['footer_description']) ?></p>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Quick links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Búsqueda</a></li>
-                        <li><a href="index.php">Inicio</a></li>
-                        <li><a href="quienes-somos.php">Quienes Somos</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Categorías</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Cocina</a></li>
-                        <li><a href="#">Decoración</a></li>
-                        <li><a href="#">Limpieza</a></li>
-                        <li><a href="#">Electrodomésticos</a></li>
-                        <li><a href="#">Ferretería</a></li>
-                        <li><a href="#">Muebles</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="<?= safeHtml($global['facebook_url']) ?>"><i class="fab fa-facebook"></i></a>
-                        <a href="<?= safeHtml($global['instagram_url']) ?>"><i class="fab fa-instagram"></i></a>
-                        <a href="<?= safeHtml($global['tiktok_url']) ?>"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <div class="footer-info">
-                        <p><?= safeHtml($global['copyright_text']) ?></p>
-                        <p><a href="#">Política de privacidad</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom Scripts -->
-    <script src="assets/js/script.js"></script>
-    <!-- Quienes Somos Page JavaScript -->
-    <script src="assets/js/quienes-somos.js"></script>
-</body>
-</html>
+<?php include 'footer.php'; ?>

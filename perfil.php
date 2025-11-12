@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil - PLASTIMARKET</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/members.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Barra de Anuncios Superior -->
-    <div class="announcement-bar">
-        <div class="container-fluid">
-            <p class="text-center mb-0">¡PRECIOS EXCLUSIVOS A MAYORISTAS!</p>
-        </div>
-    </div>
+<?php
+// Define page-specific variables
+$page_title = 'Mi Perfil - PLASTIMARKET';
+$page_description = 'Gestiona tu información personal y preferencias.';
+$page_keywords = 'PlastiMarket, perfil, cuenta, información personal';
+$page_css = 'assets/css/members.css';
+$page_js = 'assets/js/members.js';
 
-    <!-- Header Principal -->
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-4">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="logo">
-                </a>
-
-                <!-- Desktop Navigation -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-
-                <!-- Header Icons -->
-                <div class="header-icons">
-                    <a href="#" class="icon-link d-none d-lg-inline"><i class="fas fa-search"></i></a>
-                    <div class="user-dropdown dropdown d-none d-lg-inline">
-                        <a href="#" class="icon-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-user"></i>
-                            <span class="user-name">Juan Pérez</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Mi Cuenta</a></li>
-                            <li><a class="dropdown-item" href="pedidos.html"><i class="fas fa-box"></i> Mis Pedidos</a></li>
-                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user-edit"></i> Mi Perfil</a></li>
-                            <li><a class="dropdown-item" href="mayorista.html"><i class="fas fa-building"></i> Panel Mayorista</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
-                        </ul>
-                    </div>
-                    <a href="carrito.html" class="icon-link d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
-                    <button class="categories-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+include 'header.php';
+?>
 
     <!-- Profile Section -->
     <section class="dashboard-section py-5">
@@ -126,46 +61,46 @@
                         <nav class="sidebar-nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
-                                    <a href="dashboard.html" class="nav-link">
+                                    <a href="dashboard.php" class="nav-link">
                                         <i class="fas fa-tachometer-alt"></i>
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pedidos.html" class="nav-link">
+                                    <a href="pedidos.php" class="nav-link">
                                         <i class="fas fa-box"></i>
                                         <span>Mis Pedidos</span>
                                         <span class="badge">3</span>
                                     </a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a href="perfil.html" class="nav-link">
+                                    <a href="perfil.php" class="nav-link">
                                         <i class="fas fa-user-edit"></i>
                                         <span>Mi Perfil</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="favoritos.html" class="nav-link">
+                                    <a href="favoritos.php" class="nav-link">
                                         <i class="fas fa-heart"></i>
                                         <span>Favoritos</span>
                                         <span class="badge">12</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="mayorista.html" class="nav-link">
+                                    <a href="mayorista.php" class="nav-link">
                                         <i class="fas fa-building"></i>
                                         <span>Panel Mayorista</span>
                                         <span class="badge badge-premium">PRO</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="direcciones.html" class="nav-link">
+                                    <a href="direcciones.php" class="nav-link">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>Direcciones</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="configuracion.html" class="nav-link">
+                                    <a href="configuracion.php" class="nav-link">
                                         <i class="fas fa-cog"></i>
                                         <span>Configuración</span>
                                     </a>
@@ -693,166 +628,4 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="main-footer py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">
-                        <img src="https://f7df04-41.myshopify.com/cdn/shop/files/Logo_PLASTIMARKET.png?v=1728149508&width=170" alt="PLASTIMARKET" class="footer-logo mb-3">
-                        <p class="footer-description">Tu tienda de confianza para productos de hogar, cocina y más. Calidad garantizada y los mejores precios del mercado.</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Quick links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Búsqueda</a></li>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="quienes-somos.html">Quienes Somos</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Categorías</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Cocina</a></li>
-                        <li><a href="#">Decoración</a></li>
-                        <li><a href="#">Limpieza</a></li>
-                        <li><a href="#">Electrodomésticos</a></li>
-                        <li><a href="#">Ferretería</a></li>
-                        <li><a href="#">Muebles</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <div class="footer-info">
-                        <p>© 2025, PLASTIMARKET</p>                        
-                        <p><a href="#">Política de privacidad</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/members.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Profile functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Avatar upload preview
-            const avatarInput = document.getElementById('avatarInput');
-            const avatarPreview = document.getElementById('avatarPreview');
-            
-            if (avatarInput) {
-                avatarInput.addEventListener('change', function(e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            avatarPreview.src = e.target.result;
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                });
-            }
-            
-            // Password strength indicator
-            const newPasswordInput = document.getElementById('newPassword');
-            if (newPasswordInput) {
-                newPasswordInput.addEventListener('input', function() {
-                    const password = this.value;
-                    const strengthBar = document.querySelector('.strength-fill');
-                    const strengthText = document.querySelector('.strength-text');
-                    
-                    let strength = 0;
-                    let strengthLabel = 'Muy débil';
-                    
-                    if (password.length >= 8) strength++;
-                    if (/[a-z]/.test(password)) strength++;
-                    if (/[A-Z]/.test(password)) strength++;
-                    if (/[0-9]/.test(password)) strength++;
-                    if (/[^A-Za-z0-9]/.test(password)) strength++;
-                    
-                    const strengthPercentage = (strength / 5) * 100;
-                    strengthBar.style.width = strengthPercentage + '%';
-                    
-                    if (strength <= 1) {
-                        strengthLabel = 'Muy débil';
-                        strengthBar.className = 'strength-fill weak';
-                    } else if (strength <= 2) {
-                        strengthLabel = 'Débil';
-                        strengthBar.className = 'strength-fill fair';
-                    } else if (strength <= 3) {
-                        strengthLabel = 'Regular';
-                        strengthBar.className = 'strength-fill good';
-                    } else if (strength <= 4) {
-                        strengthLabel = 'Fuerte';
-                        strengthBar.className = 'strength-fill strong';
-                    } else {
-                        strengthLabel = 'Muy fuerte';
-                        strengthBar.className = 'strength-fill very-strong';
-                    }
-                    
-                    strengthText.textContent = strengthLabel;
-                });
-            }
-            
-            // Password toggle visibility
-            document.querySelectorAll('.password-toggle').forEach(button => {
-                button.addEventListener('click', function() {
-                    const input = this.parentElement.querySelector('input');
-                    const icon = this.querySelector('i');
-                    
-                    if (input.type === 'password') {
-                        input.type = 'text';
-                        icon.classList.remove('fa-eye');
-                        icon.classList.add('fa-eye-slash');
-                    } else {
-                        input.type = 'password';
-                        icon.classList.remove('fa-eye-slash');
-                        icon.classList.add('fa-eye');
-                    }
-                });
-            });
-            
-            // Form submissions
-            const forms = ['personalInfoForm', 'passwordForm', 'preferencesForm', 'notificationsForm'];
-            
-            forms.forEach(formId => {
-                const form = document.getElementById(formId);
-                if (form) {
-                    form.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        
-                        // Show success notification
-                        showNotification('Cambios guardados exitosamente', 'success');
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+<?php include 'footer.php'; ?>
